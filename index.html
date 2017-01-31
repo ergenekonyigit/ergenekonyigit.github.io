@@ -1,45 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Ergenekon Yiğit</title>
-  <link rel="icon" href="/favicon.ico">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <style>
-    html, body {
-      color: #fff;
-      background-color: #e5127d;
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-    }
-    .flex-center {
-      height: 100vh;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-    .name {
-      font-size: 56px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .title {
-      font-size: 36px;
-      opacity: .5;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    .social {
-      display: flex;
-      justify-content: space-around;
-    }
-  </style>
-</head>
-<body>
-  <div class="flex-center">
-    <div class="content">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ergenekon Yiğit</title>
+    <meta http-equiv=X-UA-Compatible content="IE=edge">
+    <meta name=description content="Website">
+    <meta name=viewport content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#E5127D">
+    <meta name="msapplication-TileColor" content="#E5127D">
+    <meta name="msapplication-TileImage" content="./images/icons/mstile-150x150.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Ergenekon Yiğit">
+    <meta name="application-name" content="Ergenekon Yiğit">
+    <link rel="apple-touch-icon" href="./images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./images/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./images/icons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./manifest.json">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/styles.css">
+  </head>
+  <body>
+    <div class="flex-center">
+      <div class="content">
       <div class="name">Ergenekon Yiğit</div>
       <div class="title">Open Source Developer</div>
       <div class="social">
@@ -48,7 +32,21 @@
         <a href="https://medium.com/@ergenekonyigit" target="_blank"><i class="fa fa-medium fa-3x" style="color: white;"></i></a>        
         <a href="https://www.linkedin.com/in/ergenekonyigit" target="_blank"><i class="fa fa-linkedin fa-3x" style="color: white;"></i></a>        
       </div>
+      </div>
     </div>
-  </div>
-</body>
+
+  <!-- JS Files  -->
+  <script type="text/javascript">
+  //If serviceWorker supports, then register it.
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register('./serviceWorker.js', { scope: "./" }) //setting scope of sw
+    .then(function (registration) {
+      console.info('Service worker is registered!');
+    })
+    .catch(function (error) {
+      console.error('Service worker failed ', error);
+    });
+  }
+  </script>
+  </body>
 </html>
