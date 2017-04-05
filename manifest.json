@@ -1,19 +1,19 @@
 {
-  "name": "Ergenekon Yiğit",
-  "short_name": "Ergenekon Yiğit",
+  "name": "Ergenekon Yigit",
+  "short_name": "ergenekonyigit",
   "description": "Website",
   "start_url": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#DE0D6A",
-  "theme_color": "#E5127D",
+  "background_color": "#fff",
+  "theme_color": "#fff",
   "icons": [{
-      "src": "./images/icons/android-chrome-192x192.png",
+      "src": "./assets/icons/android-chrome-192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "./images/icons/android-chrome-512x512.png",
+      "src": "./assets/icons/android-chrome-512x512.png",
       "type": "image/png",
       "sizes": "512x512"
   }]

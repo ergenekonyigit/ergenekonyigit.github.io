@@ -10,11 +10,15 @@ var files = [
   './',
   './index.html',
   './index.html?utm=homescreen', //SW treats query string as new page
+  './gallery.html',
   './css/styles.css',
   'https://fonts.googleapis.com/css?family=Roboto:100', //caching 3rd party content
-  './images/icons/android-chrome-192x192.png',
-  './images/icons/favicon-16x16.png',
-  './images/icons/favicon-32x32.png',
+  './assets/1.jpg',
+  './assets/2.jpg',
+  './assets/2.jpg',
+  './assets/icons/android-chrome-192x192.png',
+  './assets/icons/favicon-16x16.png',
+  './assets/icons/favicon-32x32.png',
   './manifest.json'
 ];
 
