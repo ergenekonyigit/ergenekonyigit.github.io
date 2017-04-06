@@ -18,6 +18,7 @@ var files = [
   './assets/3.jpg',
   './assets/4.jpg',
   './assets/5.jpg',
+  './assets/6.jpg',
   './assets/icons/android-chrome-192x192.png',
   './assets/icons/favicon-16x16.png',
   './assets/icons/favicon-32x32.png',
