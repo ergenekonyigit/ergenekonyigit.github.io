@@ -13,12 +13,6 @@ var files = [
   './gallery.html',
   './css/styles.css',
   'https://fonts.googleapis.com/css?family=Roboto:100', //caching 3rd party content
-  './assets/1.jpg',
-  './assets/2.jpg',
-  './assets/3.jpg',
-  './assets/4.jpg',
-  './assets/5.jpg',
-  './assets/6.jpg',
   './assets/icons/android-chrome-192x192.png',
   './assets/icons/favicon-16x16.png',
   './assets/icons/favicon-32x32.png',
