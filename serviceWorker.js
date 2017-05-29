@@ -10,7 +10,6 @@ var files = [
   './',
   './index.html',
   './index.html?utm=homescreen', //SW treats query string as new page
-  './gallery.html',
   './css/styles.css',
   'https://fonts.googleapis.com/css?family=Roboto:100', //caching 3rd party content
   './assets/icons/android-chrome-192x192.png',

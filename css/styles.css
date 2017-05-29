@@ -3,7 +3,6 @@
 }
 
 .x0 {
-  /*font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;*/
   font-family: 'Source Code Pro', monospace;
   line-height: 1.5;
   color: #000;
@@ -294,6 +293,9 @@
   width: 50%
 }
 
+a:hover {
+  color: #e5127d;
+}
 
 @media screen and (min-width:32em) {
   .sm-fs3 {
@@ -369,7 +371,7 @@
 
 @media screen and (min-width:64em) {
   .lg-fs9 {
-    font-size: 128px
+    font-size: 144px
   }
 }
 

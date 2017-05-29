@@ -37,9 +37,10 @@
       <div class="align-items-center df flex-wrap-wrap ml-16px mr-16px sm-ml-32px sm-mr-32px">
         <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://twitter.com/ergenekonyigit">Twitter</a>
         <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://github.com/ergenekonyigit">GitHub</a>
-        <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://medium.com/@ergenekonyigit">Medium</a>
+        <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://medium.com/@ergenekonyigit">Writing</a>
         <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://linkedin.com/in/ergenekonyigit">LinkedIn</a>
         <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" href="/gallery.html">Gallery</a>
+        <a class="ml4 mr4 mt3 mb3 dib fw-700 text-decoration-none pt2 pb2 c-inherit" target="_blank" href="https://instagram.com/ergenekonyigit">Instagram</a>
       </div>
     </div>
   </nav>
@@ -47,12 +48,12 @@
     //If serviceWorker supports, then register it.
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register('./serviceWorker.js', { scope: "./" }) //setting scope of sw
-      .then(function (registration) {
-        console.info('Service worker is registered!');
-      })
-      .catch(function (error) {
-        console.error('Service worker failed ', error);
-      });
+        .then(function (registration) {
+          console.info('Service worker is registered!');
+        })
+        .catch(function (error) {
+          console.error('Service worker failed ', error);
+        });
     }
   </script>
 </body>
