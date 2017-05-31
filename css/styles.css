@@ -5,7 +5,8 @@
 .x0 {
   font-family: 'Source Code Pro', monospace;
   line-height: 1.5;
-  color: #000;
+  color: #fff;
+  background-color: #000;
   margin: 0
 }
 
