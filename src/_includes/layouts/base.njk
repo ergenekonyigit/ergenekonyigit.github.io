@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if '/' === page.url %}Ergenekon Yiğit{% else %}{{ (renderData.title or title) | markdown | striptags | decodeHtmlEntities }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="/_css/main.css">
+    <link rel="manifest" href="/.webmanifest">
+    <meta name="theme-color" content="#1f1f1f">
+    <link rel="alternate" href="{{ metadata.feed.path | url }}" type="application/atom+xml" title="V8 Atom feed">
+    <script>document.documentElement.className+=' js'</script>
+{% if description %}
+    <meta name="description" content="{{ description }}">
+{% endif %}
+  </head>
+  <body>
+    <header id="header">
+      <a href="#navigation-toggle" id="nav-toggle">Show navigation</a>
+      <nav>
+        <ul>
+          <li{% if '/' === page.url %} class="active"{% endif %}><a href="/">Home</a></li>
+          <li{% if '/blog' in page.url %} class="active"{% endif %}><a href="/blog">Blog</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main">
+      {{ content | safe }}
+    </main>
+    <script type="module" src="/_js/main.mjs"></script>
+    <script nomodule src="/_js/legacy.js"></script>
+  </body>
+</html>
