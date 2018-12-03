@@ -10,9 +10,9 @@ excludeFromSitemap: true
   <link href="{{ metadata.url }}"/>
   <updated>{{ collections.posts | rssLastUpdatedDate }}</updated>
   <id>{{ metadata.feed.id }}</id>
-  <author>
+  <span>
     <name>{{ metadata.author.name }}</name>
-  </author>
+  </span>
   {%- for post in collections.posts | head(10) %}
   {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(metadata.url) | clean }}{% endset %}
   <entry>
@@ -20,9 +20,9 @@ excludeFromSitemap: true
     <link href="{{ absolutePostUrl }}"/>
     <updated>{{ post.date | rssDate }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <author>
+    <span>
       <name>{{ post.data.author | markdown | striptags }}</name>
-    </author>
+    </span>
     <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
