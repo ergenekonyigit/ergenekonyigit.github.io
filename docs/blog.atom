@@ -6,18 +6,18 @@
   <link href="https://ergenekonyigit.github.io/"/>
   <updated>2017-09-16T04:30:00+03:00</updated>
   <id>https://ergenekonyigit.github.io/</id>
-  <author>
+  <span>
     <name>Ergenekon Yiğit</name>
-  </author>
-
+  </span>
+  
   <entry>
     <title>GüçlendirMac</title>
     <link href="https://ergenekonyigit.github.io/blog/guclendirmac"/>
     <updated>2017-10-25T15:48:00+03:00</updated>
     <id>https://ergenekonyigit.github.io/blog/guclendirmac</id>
-    <author>
+    <span>
       <name>Ergenekon Yiğit (@ergenekonyigit), Software Engineer</name>
-    </author>
+    </span>
     <content type="html">&lt;p&gt;Son zamanlarda çevremdeki insanlar kullandığım kısa yollar, uygulamalar vs. hakkında sorular sormaya başlayınca bu yazı kafamda kendi kendini yazmaya başlamıştı. Bende geçtim bilgisayarın başına, bilgisayarımı hangi ayarlarla, hangi uygulamalarla kullanıyorum hepsini teker teker anlattım. 😄&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Başlamadan önce &lt;a href=&quot;https://medium.com/@ademilter&quot;&gt;Adem Ilter&lt;/a&gt;&#39;in yazısını da okumanızı öneririm.&lt;/p&gt;
@@ -111,15 +111,15 @@
 &lt;p&gt;Şimdilik aklıma gelenler bunlar, aklıma geldikçe eklemeler düzenlemeler yapmaya çalışacağım. Sizin de bu tarzda iyileştirmeleriniz varsa paylaşmaktan çekinmeyin.&lt;/p&gt;
 </content>
   </entry>
-
+  
   <entry>
     <title>iPhone X ve Garip Tasarımının Nedeni</title>
     <link href="https://ergenekonyigit.github.io/blog/iphone-x-tasarimi"/>
     <updated>2017-09-16T04:30:00+03:00</updated>
     <id>https://ergenekonyigit.github.io/blog/iphone-x-tasarimi</id>
-    <author>
+    <span>
       <name>Ergenekon Yiğit (@ergenekonyigit), Software Engineer</name>
-    </author>
+    </span>
     <content type="html">&lt;p&gt;Dün twitterda vakit geçirirken &lt;a href=&quot;https://medium.com/@yasirbugra&quot;&gt;Yasir Buğra Eryılmaz&lt;/a&gt;’ın floodun gördükten sonra bunu görselleştirmek istedim.&lt;/p&gt;
 &lt;p&gt;Flooda aşağıdan ulaşabilirsiniz.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://twitter.com/yasirbugra/status/908501033424494593&quot;&gt;Flood&lt;/a&gt;&lt;/p&gt;
