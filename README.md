@@ -10,8 +10,8 @@ This repository hosts the source code of [Ergenekon Yigit](https://ergenekonyigi
 
 `npm run` shows the full list of supported commands. Highlights:
 
-- `npm run build` builds the site into `dist`.
-- `npm run watch` builds the site into `dist` and watches for changes.
+- `npm run build` builds the site into `docs`.
+- `npm run watch` builds the site into `docs` and watches for changes.
 - `npm start` kicks off a local HTTP server.
 
 ### Additional Windows-specific instructions

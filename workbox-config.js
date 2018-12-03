@@ -12,11 +12,11 @@
 // limitations under the License.
 
 module.exports = {
-  globDirectory: 'dist/',
+  globDirectory: 'docs/',
   globPatterns: [
     '**/*.{css,mjs}',
   ],
-  swDest: 'dist/sw.js',
+  swDest: 'docs/sw.js',
   swSrc: 'src/sw.js',
   templatedUrls: {
     '/': [
