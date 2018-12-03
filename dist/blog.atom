@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Ergenekon Yiğit</title>
+  <subtitle>Blog</subtitle>
+  <link href="https://ergenekonyigit.github.io/blog.atom" rel="self"/>
+  <link href="https://ergenekonyigit.github.io/"/>
+  <updated>2017-09-16T04:30:00+03:00</updated>
+  <id>https://ergenekonyigit.github.io/</id>
+  <author>
+    <name>Ergenekon Yiğit</name>
+  </author>
+  
+  <entry>
+    <title>GüçlendirMac</title>
+    <link href="https://ergenekonyigit.github.io/blog/guclendirmac"/>
+    <updated>2017-10-25T15:48:00+03:00</updated>
+    <id>https://ergenekonyigit.github.io/blog/guclendirmac</id>
+    <author>
+      <name>Ergenekon Yiğit (@ergenekonyigit), Software Engineer</name>
+    </author>
+    <content type="html">&lt;p&gt;Son zamanlarda çevremdeki insanlar kullandığım kısa yollar, uygulamalar vs. hakkında sorular sormaya başlayınca bu yazı kafamda kendi kendini yazmaya başlamıştı. Bende geçtim bilgisayarın başına, bilgisayarımı hangi ayarlarla, hangi uygulamalarla kullanıyorum hepsini teker teker anlattım. 😄&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Başlamadan önce &lt;a href=&quot;https://medium.com/@ademilter&quot;&gt;Adem Ilter&lt;/a&gt;&#39;in yazısını da okumanızı öneririm.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/adem-md/basitle%C5%9Fmac-1b4bb9599825&quot;&gt;BasitleştirMac&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Öncelikle hangi cihazı kullanıyorum; elimde 2 yıldır Early 2015 bir MacBook Air var. Tabi ki 2 yıldır her gün kullandığım bir işletim sistemini daha kullanışlı hale getirecek bazı geliştirmeler yaptım.&lt;/p&gt;
+&lt;p&gt;Bu anlatacağım ayarlar maçOS 10.13 High Sierra üzerinde kullanılıyor olup yıllar içerisinde yazıdaki anlattığım bir ayarın yeri değişmiş olabilir.&lt;/p&gt;
+&lt;h3 id=&quot;desktop-%26-dock&quot;&gt;Desktop &amp;amp; Dock &lt;a class=&quot;bookmark&quot; href=&quot;#desktop-%26-dock&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Bilgisayarı çoğunlukla mobil olarak kullandığım için trackpadi çok fazla kullanıyorum, üst üste birden fazla windowun bulunması ve onların arasında kaybolmak beni yormaya başladıktan sonra çoklu desktop kullanımına geçtim. İlk desktopta çoğunlukla Safari ve finderı kullanıyorum, ikinci desktopta VSCode ve iTerm2 açık oluyor ve geliştirme yapacağımda ikinci desktopa kayıyorum. Üçüncü desktopta ise Spotify her zaman açık oluyor.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/desktops.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;KISS (Keep It Simple, Stupid)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Desktopta klasör ve dosya barındırmayı sevmediğim için tüm dosyalarım belli dizinlerin içerisinde. Bu konuya yazının devamında değineceğim.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/dock.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Dockta ise her gün açtığım uygulamaları sabitlemiş durumdayım. Diğer uygulamaları açmak için çoğunlukla spotlight (cmd+space) kullanıyorum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;launchpad&quot;&gt;Launchpad &lt;a class=&quot;bookmark&quot; href=&quot;#launchpad&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Launchpadde de 3 sayfa kullanıyorum. Her şeyin tek sayfada karmaşık olmasının yerine kategorilerine göre ayrı sayfalarda olmasından yanayım. İlk sayfayı varsayılan gelen haliyle tutmak gibi ilginç bir alışkanlığım var, telefonda da aynısı söz konusu. İkinci sayfada günlük olarak kullandığım yardımcı araçlar yer alıyor, üçüncü sayfada da development ile alakalı araçlar yer alıyor.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/launchpad.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Kullandığım uygulamaları yazının devamında tek tek açıklayacağım, özellikle ikinci sayfadakileri.&lt;/p&gt;
+&lt;h3 id=&quot;finder&quot;&gt;Finder &lt;a class=&quot;bookmark&quot; href=&quot;#finder&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Gelelim findera. Buraya kadar pek fazla bir özelleştirme söz konusu değildi ama iş findera gelince her gün ama her gün kullandığım bir aracı daha kullanışlı hale getirmem gerekiyordu.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/finder.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;Finder ikonuna bastığımda karşıma gelen ekran&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Başta biraz renkli ve karmaşık gelebilir, ancak sadelik karmaşıklığın doruğudur diye bir söz var.&lt;/p&gt;
+&lt;p&gt;Öncelikle git kullanan projeleri (yani hepsini) dev isimli bir klasöre topladım ve finderın yeni pencere açılma pathini dev olarak ayarladım.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/preferences-1.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Ama yukarıdan da göreceğiniz üzere kendi projelerim, iş projeleri, okumak/incelemek için indirdiğim projeler derken dev pathi karmakarışık bir hal aldı. Neredeyse 1 buçuk yıldır kullanmadığım ve “ne işe yarayacak ki” dediğim etiketler imdadıma koştu.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/preferences-2.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;5 ana başlık belirledim, bunları yanda görüyorsunuz. dev pathindeki her projeyi bu etiketler ile etiketledim. Sadece dev pathi ile kalmadı tabi bu. Örneğin google drive klasörümde bulunan bir kitabı da Read etiketiyle etiketlediğim zaman finderdaki sidebardan sadece Read kısmına basarak erişebiliyorum, hangi pathte olduğu önemini yitiriyor.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/tags.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;Örneğin Review’a tıkladığımda etiketlediğim tüm projeleri görebiliyorum&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;Dosyalarımı yedeklemek için Google Drive kullanıyorum, bir süre önce Backup and Sync from Google ismine dönüşen program ile artık bilgisayardaki herhangi bir pathi de yedekleyebiliyorsunuz.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/drive.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Drive klasörümde kitaplar, okuldaki projeleri içeren klasör, sunumlar, ekran görüntüleri ve sketch dosyalarını içen klasörler var. Ekran görüntüleri dikkatinizi çekmiş olabilir. Evet macteki ekran görüntülerini drive içerisindeki Screenshots isimli klasörde tutuyorum. Bu sayede bilgisayarı açamadığım durumda bile telefonumdan ekran görüntülerine erişebiliyorum.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/downloads.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Downloads klasörümü de google driveda tutuyorum. Burası da dağınık değil. İndirdiğim dosya saklamaya değer ise bu klasörlerden birine giriyor, değil ise zaten cöpü boyluyor.&lt;/p&gt;
+&lt;p&gt;Open in code adında ufak bir eklenti de kullanıyorum finder içerisinde. Bu ikona tıkladığımda o an bulunduğum pathi VSCode ile açıyor.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/open-in-vscode.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;apps&quot;&gt;Apps &lt;a class=&quot;bookmark&quot; href=&quot;#apps&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Kullandığım yardımcı araçları anlatmaya başlayabilirim artık. 😄&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/utils.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;VLC, Shazam gibi bilinenler haricinde diğerlerini açıklayacağım.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Backup and Sync from Google&lt;/em&gt;: Google Drive uygulamasının yeni adı.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;KeepingYouAwake&lt;/em&gt;: Caffeine isimli bilgisayarın uykuya dalmasını engelleyen uygulamanın open source muadili.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;4K Video Downloader&lt;/em&gt;: Youtubedan video indirmek için kullanıdığım araç.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mos&lt;/em&gt;: Yakın zamanda klavye ve mouse alarak evde maci masaüstü gibi kullanmaya başladım ancak ben scroll directionı natural kullandığım için mouse kullanırken reverse scrolling yapmam gerekiyordu. Ayrıca magic mouse olmadığı için smooth scrolling de yapamıyordum. Arayışlarım sonucunda bu uygulama ile iki sorunu da tek seferde çözdüm.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Kap&lt;/em&gt;: kısa gifler hazırlamak için kullandığım menübar uygulaması.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;App Cleaner&lt;/em&gt;: Birkaç mb olmasına rağmen kaldırmak istediğiniz uygulamanın işletim sistemindeki tüm izlerini silmenize yardımcı oluyor.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Itsycal&lt;/em&gt;: Ufak, sade bir takvim uygulaması.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Shiftit&lt;/em&gt;: Gün içinde en fazla kullandığım uygulama olabilir. ctrl+alt+cmd ile c / m / - /+/ sağ / sol / yukarı / aşağı gibi kısayolları olan pencereleri hizalamanıza yarayan efsane bir open source uygulama.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ShowKeys&lt;/em&gt;: Hangi tuşa bastığınızı büyük bir şekilde konumlandırdığınız pencerede gösteren uygulama.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Spotify Notifications&lt;/em&gt;: Ben spotifyı 3. desktopta kullandığım için ismini bilmediğim bir şarkıda git gel toplam 4 defa kaydırma yapmam gerekiyordu. Bu yüzden githubda bu uygulamayı buldum, her yeni şarkı başladığında bildirim olarak gösteriyor. (eskiden spotify içerisinde olan bu özellik daha sonra kaldırılmış.)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;terminal&quot;&gt;Terminal &lt;a class=&quot;bookmark&quot; href=&quot;#terminal&quot; aria-hidden=&quot;true&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Terminali full screen kullanan kişilerdenim, İkinci desktopta iTerm2 her zaman açık halde bekler. Mac kullananların bildiği üzere full screen appler yeni bir desktop olarak açılıyor. Ama hem ikinci desktopta hem de full screen nasıl kullanılıyor diye sormuş olabilirsiniz, iTerm2nin ayarlarında native full screen windows tikini kaldırdığınızda artık bulunduğunuz desktop içinde full screen kullanabilirsiniz.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/terminal.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;Tabi her seferinde -cmd+tab olmadığını varsayarsak- docktaki ikona tıklamak zahmetli olacağı için Pointer menüsü altından iTerm2&#39;ye bir hotkey atadım (ctrl+t). Bu sayede hangi desktopta olursam olayım ctrl+t’ye basarak terminale geçebiliyorum. Tabi bir sorun daha var, mac klavyelerinde ctrl tuşu çok saçma bir yerde. Ben bu tuşu caps lock ile değiştirdim. Bu sayede serçe parmağımı saçma sapan bükmeden rahatlıkla ctrl tuşuna basabiliyorum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Githubdan çektiğim dosyaları dev pathi altına çektiğimi söylemiştim. Ama terminalde cd yaptığım zaman ~/ pathine dönüyordu. Bunun için ve başka şeyler için de birkaç alias yazmam gerekti.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/guclendirmac/alias.png&quot; alt=&quot;&quot;&gt;
+&lt;/figure&gt;
+&lt;p&gt;En alttaki png ve jpg aliasları aldığım screenshotı hangi dosya formatında kaydedeceğimi belirlemek için kullanıyorum. Örneğin twitterda png yerine jpg resim yüklüyorum çünkü png bazen patlıyor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Şimdilik aklıma gelenler bunlar, aklıma geldikçe eklemeler düzenlemeler yapmaya çalışacağım. Sizin de bu tarzda iyileştirmeleriniz varsa paylaşmaktan çekinmeyin.&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>iPhone X ve Garip Tasarımının Nedeni</title>
+    <link href="https://ergenekonyigit.github.io/blog/iphone-x-tasarimi"/>
+    <updated>2017-09-16T04:30:00+03:00</updated>
+    <id>https://ergenekonyigit.github.io/blog/iphone-x-tasarimi</id>
+    <author>
+      <name>Ergenekon Yiğit (@ergenekonyigit), Software Engineer</name>
+    </author>
+    <content type="html">&lt;p&gt;Dün twitterda vakit geçirirken &lt;a href=&quot;https://medium.com/@yasirbugra&quot;&gt;Yasir Buğra Eryılmaz&lt;/a&gt;’ın floodun gördükten sonra bunu görselleştirmek istedim.&lt;/p&gt;
+&lt;p&gt;Flooda aşağıdan ulaşabilirsiniz.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/yasirbugra/status/908501033424494593&quot;&gt;Flood&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yıllar boyunca birçok yerde telefon ikonu için aşağıdaki (solda) iPhone ikonu kullanıldı. Ancak son yıllarda akıllı telefonlarda çerçevelerin kapladığı alanı azaltma yarışına girildi. Apple da buna kayıtsız kalamadı ki 12 eylül 2017&#39;de düzenlenen Keynote’unda iPhone X adında radikal tasarım değişikliklerine sahip bir cihaz tanıttı.&lt;/p&gt;
+&lt;p&gt;Tim Cook’un iPhone X’i tanıtırken söylediklerinden anlaşılacağı üzere yeni iPhone tasarımını uzun bir süre göreceğiz.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first iPhone revolutionized a decade of technology and change the world in the process. Now 10 years later, it is only fitting that we are here in this place on this day to reveal a product that will set the path for technology for the next decade.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/iphone-x-tasarimi/iphone-old-new.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;Yıllardır gördüğümüz iPhone ikonu (solda), ve önümüzdeki günlerde sıkça görmeye başlayacağımız iPhone ikonu (sağda)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Son yıllarda çıkan android telefonların genel görünümü aşağıdaki şekilde (solda). İki farklı ikona bakıldığında hangisinin iPhone olduğu rahatlıkla seçilebiliyor. Apple’ın da bu yeni-garip tasarımda başarmak istediği buydu ve başaracakmış gibi gözüküyor.&lt;/p&gt;
+&lt;figure&gt;
+  &lt;img src=&quot;https://ergenekonyigit.github.io/_img/iphone-x-tasarimi/android-vs-iphone.png&quot; alt=&quot;&quot;&gt;
+  &lt;figcaption&gt;Son yıllarda android telefonların genel görünümü (solda), yeni iPhone ikonu (sağda)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Edit: The Verge’de de bu konuyla ilgili bir yazı yazılmış. &lt;a href=&quot;https://www.theverge.com/2017/9/14/16306244/apple-iphone-x-design-notch&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
+</feed>
