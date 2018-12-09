@@ -29,14 +29,14 @@ Bu anlatacağım ayarlar maçOS 10.13 High Sierra üzerinde kullanılıyor olup 
 Bilgisayarı çoğunlukla mobil olarak kullandığım için trackpadi çok fazla kullanıyorum, üst üste birden fazla windowun bulunması ve onların arasında kaybolmak beni yormaya başladıktan sonra çoklu desktop kullanımına geçtim. İlk desktopta çoğunlukla Safari ve finderı kullanıyorum, ikinci desktopta VSCode ve iTerm2 açık oluyor ve geliştirme yapacağımda ikinci desktopa kayıyorum. Üçüncü desktopta ise Spotify her zaman açık oluyor.
 
 <figure>
-  <img src="/_img/guclendirmac/desktops.png" alt="">
+  <img src="/img/guclendirmac/desktops.png" alt="">
   <figcaption>KISS (Keep It Simple, Stupid)</figcaption>
 </figure>
 
 Desktopta klasör ve dosya barındırmayı sevmediğim için tüm dosyalarım belli dizinlerin içerisinde. Bu konuya yazının devamında değineceğim.
 
 <figure>
-  <img src="/_img/guclendirmac/dock.png" alt="">
+  <img src="/img/guclendirmac/dock.png" alt="">
 </figure>
 
 Dockta ise her gün açtığım uygulamaları sabitlemiş durumdayım. Diğer uygulamaları açmak için çoğunlukla spotlight (cmd+space) kullanıyorum.
@@ -48,7 +48,7 @@ Dockta ise her gün açtığım uygulamaları sabitlemiş durumdayım. Diğer uy
 Launchpadde de 3 sayfa kullanıyorum. Her şeyin tek sayfada karmaşık olmasının yerine kategorilerine göre ayrı sayfalarda olmasından yanayım. İlk sayfayı varsayılan gelen haliyle tutmak gibi ilginç bir alışkanlığım var, telefonda da aynısı söz konusu. İkinci sayfada günlük olarak kullandığım yardımcı araçlar yer alıyor, üçüncü sayfada da development ile alakalı araçlar yer alıyor.
 
 <figure>
-  <img src="/_img/guclendirmac/launchpad.png" alt="">
+  <img src="/img/guclendirmac/launchpad.png" alt="">
 </figure>
 
 Kullandığım uygulamaları yazının devamında tek tek açıklayacağım, özellikle ikinci sayfadakileri.
@@ -58,7 +58,7 @@ Kullandığım uygulamaları yazının devamında tek tek açıklayacağım, öz
 Gelelim findera. Buraya kadar pek fazla bir özelleştirme söz konusu değildi ama iş findera gelince her gün ama her gün kullandığım bir aracı daha kullanışlı hale getirmem gerekiyordu.
 
 <figure>
-  <img src="/_img/guclendirmac/finder.png" alt="">
+  <img src="/img/guclendirmac/finder.png" alt="">
   <figcaption>Finder ikonuna bastığımda karşıma gelen ekran</figcaption>
 </figure>
 
@@ -67,19 +67,19 @@ Başta biraz renkli ve karmaşık gelebilir, ancak sadelik karmaşıklığın do
 Öncelikle git kullanan projeleri (yani hepsini) dev isimli bir klasöre topladım ve finderın yeni pencere açılma pathini dev olarak ayarladım.
 
 <figure>
-  <img src="/_img/guclendirmac/preferences-1.png" alt="">
+  <img src="/img/guclendirmac/preferences-1.png" alt="">
 </figure>
 
 Ama yukarıdan da göreceğiniz üzere kendi projelerim, iş projeleri, okumak/incelemek için indirdiğim projeler derken dev pathi karmakarışık bir hal aldı. Neredeyse 1 buçuk yıldır kullanmadığım ve “ne işe yarayacak ki” dediğim etiketler imdadıma koştu.
 
 <figure>
-  <img src="/_img/guclendirmac/preferences-2.png" alt="">
+  <img src="/img/guclendirmac/preferences-2.png" alt="">
 </figure>
 
 5 ana başlık belirledim, bunları yanda görüyorsunuz. dev pathindeki her projeyi bu etiketler ile etiketledim. Sadece dev pathi ile kalmadı tabi bu. Örneğin google drive klasörümde bulunan bir kitabı da Read etiketiyle etiketlediğim zaman finderdaki sidebardan sadece Read kısmına basarak erişebiliyorum, hangi pathte olduğu önemini yitiriyor.
 
 <figure>
-  <img src="/_img/guclendirmac/tags.png" alt="">
+  <img src="/img/guclendirmac/tags.png" alt="">
   <figcaption>Örneğin Review’a tıkladığımda etiketlediğim tüm projeleri görebiliyorum</figcaption>
 </figure>
 
@@ -88,13 +88,13 @@ Ama yukarıdan da göreceğiniz üzere kendi projelerim, iş projeleri, okumak/i
 Dosyalarımı yedeklemek için Google Drive kullanıyorum, bir süre önce Backup and Sync from Google ismine dönüşen program ile artık bilgisayardaki herhangi bir pathi de yedekleyebiliyorsunuz.
 
 <figure>
-  <img src="/_img/guclendirmac/drive.png" alt="">
+  <img src="/img/guclendirmac/drive.png" alt="">
 </figure>
 
 Drive klasörümde kitaplar, okuldaki projeleri içeren klasör, sunumlar, ekran görüntüleri ve sketch dosyalarını içen klasörler var. Ekran görüntüleri dikkatinizi çekmiş olabilir. Evet macteki ekran görüntülerini drive içerisindeki Screenshots isimli klasörde tutuyorum. Bu sayede bilgisayarı açamadığım durumda bile telefonumdan ekran görüntülerine erişebiliyorum.
 
 <figure>
-  <img src="/_img/guclendirmac/downloads.png" alt="">
+  <img src="/img/guclendirmac/downloads.png" alt="">
 </figure>
 
 Downloads klasörümü de google driveda tutuyorum. Burası da dağınık değil. İndirdiğim dosya saklamaya değer ise bu klasörlerden birine giriyor, değil ise zaten cöpü boyluyor.
@@ -102,7 +102,7 @@ Downloads klasörümü de google driveda tutuyorum. Burası da dağınık değil
 Open in code adında ufak bir eklenti de kullanıyorum finder içerisinde. Bu ikona tıkladığımda o an bulunduğum pathi VSCode ile açıyor.
 
 <figure>
-  <img src="/_img/guclendirmac/open-in-vscode.png" alt="">
+  <img src="/img/guclendirmac/open-in-vscode.png" alt="">
 </figure>
 
 ---
@@ -112,7 +112,7 @@ Open in code adında ufak bir eklenti de kullanıyorum finder içerisinde. Bu ik
 Kullandığım yardımcı araçları anlatmaya başlayabilirim artık. 😄
 
 <figure>
-  <img src="/_img/guclendirmac/utils.png" alt="">
+  <img src="/img/guclendirmac/utils.png" alt="">
 </figure>
 
 VLC, Shazam gibi bilinenler haricinde diğerlerini açıklayacağım.
@@ -144,7 +144,7 @@ VLC, Shazam gibi bilinenler haricinde diğerlerini açıklayacağım.
 Terminali full screen kullanan kişilerdenim, İkinci desktopta iTerm2 her zaman açık halde bekler. Mac kullananların bildiği üzere full screen appler yeni bir desktop olarak açılıyor. Ama hem ikinci desktopta hem de full screen nasıl kullanılıyor diye sormuş olabilirsiniz, iTerm2nin ayarlarında native full screen windows tikini kaldırdığınızda artık bulunduğunuz desktop içinde full screen kullanabilirsiniz.
 
 <figure>
-  <img src="/_img/guclendirmac/terminal.png" alt="">
+  <img src="/img/guclendirmac/terminal.png" alt="">
 </figure>
 
 Tabi her seferinde -cmd+tab olmadığını varsayarsak- docktaki ikona tıklamak zahmetli olacağı için Pointer menüsü altından iTerm2'ye bir hotkey atadım (ctrl+t). Bu sayede hangi desktopta olursam olayım ctrl+t’ye basarak terminale geçebiliyorum. Tabi bir sorun daha var, mac klavyelerinde ctrl tuşu çok saçma bir yerde. Ben bu tuşu caps lock ile değiştirdim. Bu sayede serçe parmağımı saçma sapan bükmeden rahatlıkla ctrl tuşuna basabiliyorum.
@@ -154,7 +154,7 @@ Tabi her seferinde -cmd+tab olmadığını varsayarsak- docktaki ikona tıklamak
 Githubdan çektiğim dosyaları dev pathi altına çektiğimi söylemiştim. Ama terminalde cd yaptığım zaman ~/ pathine dönüyordu. Bunun için ve başka şeyler için de birkaç alias yazmam gerekti.
 
 <figure>
-  <img src="/_img/guclendirmac/alias.png" alt="">
+  <img src="/img/guclendirmac/alias.png" alt="">
 </figure>
 
 En alttaki png ve jpg aliasları aldığım screenshotı hangi dosya formatında kaydedeceğimi belirlemek için kullanıyorum. Örneğin twitterda png yerine jpg resim yüklüyorum çünkü png bazen patlıyor.

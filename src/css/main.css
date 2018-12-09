@@ -69,7 +69,7 @@ body {
   font-size: 16px;
   position: absolute;
   bottom: 0;
-  /* background: url(../_img/v8-outline.svg) no-repeat center center; */
+  /* background: url(../img/v8-outline.svg) no-repeat center center; */
   background-size: 80%;
   width: 6.5em;
   height: 6.5em;
@@ -89,7 +89,7 @@ body {
   display: none;
 }
 #nav-toggle::after {
-  /* background: url(/_img/v8-outline.svg) no-repeat center center; */
+  /* background: url(/img/v8-outline.svg) no-repeat center center; */
   content: '';
   width: 2em;
   height: 2em;
@@ -142,7 +142,7 @@ hr {
 }
 .retweet {
   display: inline-block;
-  background: url(/_img/twitter.svg) no-repeat 0 0;
+  background: url(/img/twitter.svg) no-repeat 0 0;
   padding-left: 1.75em;
   color: var(--darkgray);
   border-color: var(--darkgray);
@@ -153,7 +153,7 @@ hr {
   border-color: var(--darkgray);
 }
 #footer {
-  /* background: var(--lightestgray) url(/_img/v8-outline.svg) no-repeat 95.5% center; */
+  /* background: var(--lightestgray) url(/img/v8-outline.svg) no-repeat 95.5% center; */
   padding-right: 12em;
   background-size: 10em;
 }
