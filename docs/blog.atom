@@ -6,9 +6,9 @@
   <link href="https://ergenekonyigit.github.io/"/>
   <updated>2017-09-16T04:30:00+03:00</updated>
   <id>https://ergenekonyigit.github.io/</id>
-  <span>
+  <author>
     <name>Ergenekon Yiğit</name>
-  </span>
+  </author>
   
   <entry>
     <title>VSCode: ESLint, Stylelint ve Prettier&#39;ı sorunsuz kullanmak</title>
