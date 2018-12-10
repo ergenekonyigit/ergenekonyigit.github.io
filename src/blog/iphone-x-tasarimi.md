@@ -5,8 +5,8 @@ avatars:
   - ergenekon-yigit
 date: 2017-09-16 01:30:00
 tags:
-  - iPhoneX
-  - Design
+  - iphone-x
+  - design
 description: 'iPhone X ve Garip Tasarımının Nedeni'
 tweet: '908820358727421954'
 ---

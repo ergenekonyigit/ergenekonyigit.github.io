@@ -5,8 +5,8 @@ avatars:
   - ergenekon-yigit
 date: 2017-10-25 12:48:00
 tags:
-  - macOS
-  - TipsAndTricks
+  - macos
+  - tips-and-tricks
 description: 'GüçlendirMac'
 tweet: '923124034778357761'
 ---
