@@ -13,6 +13,7 @@ tags:
   - eslint
   - stylelint
 description: 'ESLint ve Stylelint kullanılan projeye Prettier eklemek'
+tweet: '1072080115625066500'
 ---
 
 Kod yazan her insanın kendine özgü bir yazım stili var. Bazı diller farklılıkların önüne geçebilmek için kendi style guidelarına göre formatterlara sahipler. Go(gofmt) ve ReasonML(refmt) bunlara örnek gösterilebilir. Javascript dilinde bu tarz bir çözüm dil ile birlikte gelmiyor, bunun için çeşitli yardımcı paketler kullanmamız gerekmekte. Prettier bu konuda en popüler çözüm olarak göze çarpıyor. Ancak daha önce bu konuda uğraşanlar da anlayacaktır ki projede hem linter hem de formatterı aynı anda kullanmak istersek bazı sorunlar ortaya çıkabiliyor. Örneğin linterın kuralları ile formatterın kuralları birbirini ezip kodu okunamaz hale getirebiliyor. VSCode içerisinde bu paketlerin uyumlu çalışmasını sağlamak için yapmamız gereken birkaç şey var.
