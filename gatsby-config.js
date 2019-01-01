@@ -8,7 +8,7 @@ module.exports = {
       twitter: '@ergenekonyigit',
     },
   },
-  pathPrefix: '/ergenekonyigit.github.io',
+  pathPrefix: '/',
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
