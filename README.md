@@ -1,15 +1,7 @@
 # ergenekonyigit.github.io
 
-This repository hosts the source code of [Ergenekon Yigit](https://ergenekonyigit.github.io/) Blog.
+My personal blog. Forked from [Overreacted](https://github.com/gaearon/overreacted.io). Syntax theme based on [Sarah Drasner's Night Owl](https://github.com/sdras/night-owl-vscode-theme/) with small tweaks.
 
-## Local setup
+To run locally, `yarn`, then `yarn dev`, then open https://localhost:8000.
 
-1. Clone the repository and `cd` into it.
-1. Install and use the [expected](https://github.com/ergenekonyigit/ergenekonyigit.github.io/blob/master/.nvmrc) Node.js version: `nvm use`
-1. Install dependencies: `npm install`
-
-`npm run` shows the full list of supported commands. Highlights:
-
-- `npm run build` builds the site into `docs`.
-- `npm run watch` builds the site into `docs` and watches for changes.
-- `npm start` kicks off a local HTTP server.
+If you translate content into other languages feel free to PR links. Please ensure translations link to the original content.
