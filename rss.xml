@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Personal blog by Ergenekon Yigit.]]></description><link>https://ergenekonyigit.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 01 Jan 2019 14:12:43 GMT</lastBuildDate><item><title><![CDATA[VSCode: ESLint, Stylelint ve Prettier'ı sorunsuz kullanmak]]></title><description><![CDATA[Kod yazan her insanın kendine özgü bir yazım stili var. Bazı diller farklılıkların önüne geçebilmek için kendi style guidelarına göre…]]></description><link>https://ergenekonyigit.github.io/eslint-stylelint-prettier-kullanimi/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/eslint-stylelint-prettier-kullanimi/</guid><pubDate>Mon, 10 Dec 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Kod yazan her insanın kendine özgü bir yazım stili var. Bazı diller farklılıkların önüne geçebilmek için kendi style guidelarına göre formatterlara sahipler. Go(gofmt) ve ReasonML(refmt) bunlara örnek gösterilebilir. Javascript dilinde bu tarz bir çözüm dil ile birlikte gelmiyor, bunun için çeşitli yardımcı paketler kullanmamız gerekmekte. Prettier bu konuda en popüler çözüm olarak göze çarpıyor. Ancak daha önce bu konuda uğraşanlar da anlayacaktır ki projede hem linter hem de formatterı aynı anda kullanmak istersek bazı sorunlar ortaya çıkabiliyor. Örneğin linterın kuralları ile formatterın kuralları birbirini ezip kodu okunamaz hale getirebiliyor. VSCode içerisinde bu paketlerin uyumlu çalışmasını sağlamak için yapmamız gereken birkaç şey var.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;yarn add --dev prettier-eslint prettier-eslint-cli prettier-stylelint&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;VSCode içerisinde entegrasyon için bu 3 aracın eklentisini yüklememiz gerek. Eklentiler;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&quot;&gt;Prettier&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&quot;&gt;ESLint&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=shinnn.stylelint&quot;&gt;StyleLint&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Ardından projemiz içerisinde &lt;code&gt;.vscode/settings.json&lt;/code&gt; içerisine şu ayarları eklemeliyiz.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;// .vscode/settings.json
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;prettier.eslintIntegration&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;prettier.stylelintIntegration&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;eslint.autoFixOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;editor.formatOnSave&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;.eslintrc.json&lt;/code&gt; dosyasına prettierın ruleslarını kullanacağımızı belirtiyoruz.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;// .eslintrc.json
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;parser&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;babel-eslint&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;extends&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;prettier&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react-app&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;plugin:prettier/recommended&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;plugins&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;prettier&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;rules&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;prettier/prettier&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;error&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;jsx-a11y/href-no-hash&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;react/jsx-filename-extension&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;token property&quot;&gt;&quot;extensions&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;.js&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;.jsx&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;package.json&lt;/code&gt; içersine bu scriptleri ekledikten sonra işlem tamamdır.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;// package.json
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;fix-code&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;prettier-eslint --write &apos;source/**/*.{js,jsx}&apos; &quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;&quot;fix-styles&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;prettier-stylelint --write &apos;source/**/*.{css,scss}&apos; &quot;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Artık projede kaç kişi çalışıyorsa çalışın, codebase tek elden çıkmış şekilde olacak. Kod okunabilirliği açısından önemli detaylardan birini halletmiş olduk.&lt;/p&gt;
+&lt;p&gt;Dilerseniz &lt;code&gt;husky&lt;/code&gt; tarzı pre-commit araçları kullanarak her commit atıldığında otomatik tüm codebasei formatlayabilirsiniz.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;// .lintstagedrc
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;*.js&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;yarn fix-code&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;git add&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;token property&quot;&gt;&quot;*.scss&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;yarn fix-styles&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;git add&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[GüçlendirMac]]></title><description><![CDATA[Son zamanlarda çevremdeki insanlar kullandığım kısa yollar, uygulamalar vs. hakkında sorular sormaya başlayınca bu yazı kafamda kendi…]]></description><link>https://ergenekonyigit.github.io/guclendirmac/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/guclendirmac/</guid><pubDate>Wed, 25 Oct 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Son zamanlarda çevremdeki insanlar kullandığım kısa yollar, uygulamalar vs. hakkında sorular sormaya başlayınca bu yazı kafamda kendi kendini yazmaya başlamıştı. Bende geçtim bilgisayarın başına, bilgisayarımı hangi ayarlarla, hangi uygulamalarla kullanıyorum hepsini teker teker anlattım. 😄&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Başlamadan önce &lt;a href=&quot;https://medium.com/@ademilter&quot;&gt;Adem Ilter&lt;/a&gt;‘in yazısını da okumanızı öneririm.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://medium.com/adem-md/basitle%C5%9Fmac-1b4bb9599825&quot;&gt;BasitleştirMac&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Öncelikle hangi cihazı kullanıyorum; elimde 2 yıldır Early 2015 bir MacBook Air var. Tabi ki 2 yıldır her gün kullandığım bir işletim sistemini daha kullanışlı hale getirecek bazı geliştirmeler yaptım.&lt;/p&gt;
+&lt;p&gt;Bu anlatacağım ayarlar maçOS 10.13 High Sierra üzerinde kullanılıyor olup yıllar içerisinde yazıdaki anlattığım bir ayarın yeri değişmiş olabilir.&lt;/p&gt;
+&lt;h3 id=&quot;desktop--dock&quot;&gt;&lt;a href=&quot;#desktop--dock&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Desktop &amp;#x26; Dock&lt;/h3&gt;
+&lt;p&gt;Bilgisayarı çoğunlukla mobil olarak kullandığım için trackpadi çok fazla kullanıyorum, üst üste birden fazla windowun bulunması ve onların arasında kaybolmak beni yormaya başladıktan sonra çoklu desktop kullanımına geçtim. İlk desktopta çoğunlukla Safari ve finderı kullanıyorum, ikinci desktopta VSCode ve iTerm2 açık oluyor ve geliştirme yapacağımda ikinci desktopa kayıyorum. Üçüncü desktopta ise Spotify her zaman açık oluyor.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/03716a0ac8809d0d8629437afedba696/0c762/desktops.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 20.8%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsSAAALEgHS3X78AAAA/0lEQVQI1wH0AAv/AKC+1Z+81KrF3rTK3q29zbXD0X2BhwABAAcFBQEAAAAAAQENCSw/DnFZcn9Wrn5XpYROn35VpXZSn2tIlwC7y93F2OqwusmSkpp5bXCabGBaPjcAAAAAAgIPIQhVWRWqgSvciU16WYxER6pjVamido5zU5pIR6JBPpYAfnmCdm5wZlJHg18/pGIroGIqVEAgMEMTi3Uhz4k+03xjllt2PzRcGTF4HTugQkibspGDYkh7FDaaGTGMAINXMJRPIqJjJahpI7JqI3pYGodkHd9+RblpdmRKdhsmSAALFwAAAAIaVQExmAowj0AzfR4xgwApiwIkgM1bW6YDc06CAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;desktops&quot; title=&quot;&quot; src=&quot;/static/03716a0ac8809d0d8629437afedba696/42603/desktops.png&quot; srcset=&quot;/static/03716a0ac8809d0d8629437afedba696/f931c/desktops.png 200w,
+/static/03716a0ac8809d0d8629437afedba696/e8031/desktops.png 400w,
+/static/03716a0ac8809d0d8629437afedba696/42603/desktops.png 800w,
+/static/03716a0ac8809d0d8629437afedba696/5b8b9/desktops.png 1200w,
+/static/03716a0ac8809d0d8629437afedba696/c7ea5/desktops.png 1600w,
+/static/03716a0ac8809d0d8629437afedba696/0c762/desktops.png 2000w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+  &lt;figcaption&gt;KISS (Keep It Simple, Stupid)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Desktopta klasör ve dosya barındırmayı sevmediğim için tüm dosyalarım belli dizinlerin içerisinde. Bu konuya yazının devamında değineceğim.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/3244f285e1de4be18b039c13bd3ad286/48349/dock.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 422px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 23.933649289099527%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAABRElEQVQY063QS0sCYRTG8fFsAic00ZKaysuMM+84Fy0vY7Sp0cSOFZI1BFIUFa5adKPaSdAmqHUobVq060O06DMFQe9JJegL9N89m9/iEYR+Y7GkkFnfgiW3DGZlG0qZeWipKuiaBk7WAN1iwBgDqZmDeIFBtrAI2eoalCsVaDQaIIrigBFUVRUEMRT0Cf+Q3+//G5FoeCJpJVCelZDZNhbHI7gsjGA4qqAka6gxFbWEgrEcw0RKRnVmGuVoaJWllLpl29VgIBAaOLIs/4qSgdh9p87jE+Vv3qi8f0Ivp3vUdE06r8+RUWLEciaNPtdp0rNo5eiaaq8fdHv/QL1u76svOANG13UYesGpFDo7HfJ2j3m+ecGVjU3uXdW46+gci2lupDXOzDSXLl0er1rcWfX4wtndd+vgkNrt9qcPYAhq/c9/AM4hVYoGX3jRAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;dock&quot; title=&quot;&quot; src=&quot;/static/3244f285e1de4be18b039c13bd3ad286/48349/dock.png&quot; srcset=&quot;/static/3244f285e1de4be18b039c13bd3ad286/7c9d0/dock.png 200w,
+/static/3244f285e1de4be18b039c13bd3ad286/c5f02/dock.png 400w,
+/static/3244f285e1de4be18b039c13bd3ad286/48349/dock.png 422w&quot; sizes=&quot;(max-width: 422px) 100vw, 422px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Dockta ise her gün açtığım uygulamaları sabitlemiş durumdayım. Diğer uygulamaları açmak için çoğunlukla spotlight (cmd+space) kullanıyorum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;launchpad&quot;&gt;&lt;a href=&quot;#launchpad&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Launchpad&lt;/h3&gt;
+&lt;p&gt;Launchpadde de 3 sayfa kullanıyorum. Her şeyin tek sayfada karmaşık olmasının yerine kategorilerine göre ayrı sayfalarda olmasından yanayım. İlk sayfayı varsayılan gelen haliyle tutmak gibi ilginç bir alışkanlığım var, telefonda da aynısı söz konusu. İkinci sayfada günlük olarak kullandığım yardımcı araçlar yer alıyor, üçüncü sayfada da development ile alakalı araçlar yer alıyor.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/47be755039d7967196ce351a17f56996/0c762/launchpad.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 20.8%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAIAAAABPYjBAAAACXBIWXMAAAsSAAALEgHS3X78AAAA/UlEQVQI12OIa1yQ2ragsGVKTc+8pv45tZ2TCxonp7csLuubX9Q3tax+Yn3P7OLW6emN0+Pq52RU9dX1zWrunJRW0pRb1shQ2Dq3pndaRVlNQX5pcWpqXWxQZmRUaWdXZWdXVl5lXFxqfkRQibNpalpBec/irPL+nNyKgvDYkkCvDDtDhuiQuJig4LRA25oQ/Q43le5A5XgXg9DQCH93uzAb7VxHhSZ7kRxrwUgPp7CAkAB7k2g7tTJH2Xp7oTQbMYY0a8lyS5FaF9E2D7EeN/EMJ/5gS/58S7FKSyGgYLureKu7WKQdT7SVSKmlSJWNUJ2rWK+7eJmrcLAVNwCKUlmeWMNnVgAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;launchpad&quot; title=&quot;&quot; src=&quot;/static/47be755039d7967196ce351a17f56996/42603/launchpad.png&quot; srcset=&quot;/static/47be755039d7967196ce351a17f56996/f931c/launchpad.png 200w,
+/static/47be755039d7967196ce351a17f56996/e8031/launchpad.png 400w,
+/static/47be755039d7967196ce351a17f56996/42603/launchpad.png 800w,
+/static/47be755039d7967196ce351a17f56996/5b8b9/launchpad.png 1200w,
+/static/47be755039d7967196ce351a17f56996/c7ea5/launchpad.png 1600w,
+/static/47be755039d7967196ce351a17f56996/0c762/launchpad.png 2000w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Kullandığım uygulamaları yazının devamında tek tek açıklayacağım, özellikle ikinci sayfadakileri.&lt;/p&gt;
+&lt;h3 id=&quot;finder&quot;&gt;&lt;a href=&quot;#finder&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Finder&lt;/h3&gt;
+&lt;p&gt;Gelelim findera. Buraya kadar pek fazla bir özelleştirme söz konusu değildi ama iş findera gelince her gün ama her gün kullandığım bir aracı daha kullanışlı hale getirmem gerekiyordu.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/14e1551ef10bf73defc433a40711433c/ab2cf/finder.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 79.8076923076923%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACn0lEQVQ4y5WT627TMBiGO+Bi+MMdIBGJ/eQX2oa2bNJW7YJ2HQgtcAeI7gArA9aWtU3jHBvn3JwPa1p/ONnaIRhoe6NXli37yWf7daNBhT68e9o6O1ztj9ALaSQywggxru0ymqIxqqQwJ32Z+d7tMzISGZWOjdUxIwoiI9K5EpIYxKNVNELPGguh9pe3foyB59GcAsAyTGiftUEWZTB0DJeiCqqGwbUdUGSlHncsp7Y+1sn0agpIQB+XwNbxCWdgCzRZLofymJxLmHR/XBDLskkYRgQbAUmThKRpSqIoqp0mad1P4mQGVKqqHlHU42tgq8XxIx6E4aAcjE1yJFkEa1q9IC8KoucxgeqDO10DPc9rLYE8z3NxkoAqSaXqBnCuuUCBEMdJNRfiaALz+RwIIXe5BjqOc1thr9fjDNOsgUaYwlcKVCURRFEC13UhyPwaWKmC/K4FkM67BXa7Xc4PArCwXhpRBieyBYoogiAgMCwbJHpMZD673uN9gJ1Oh4viGFzLvAHaIAwGMBwMwfUmYIVTWuHs/hX2Ly+5oriCieuUmG65PXZBEgSY+D6kaQZxMHvYljs/O1x1idM8L+0kh2+6B45pQFV1JSsMlqB7AS9GQw6HPoSeV1ppAaeKXZ0nYGxAEIagJxT4kArFXoeLbRMc2y6tpKA5NMloOCA0TkTHBjH9jN7J7CYlf2kRm9scKrzwvghjCPzJzCtm8FmlT0pTIYriOs9u7sB/tAj28RI46A8PAz+sIKU+icgp0oln2yTNMpJR+1ZIsjwjBX01eZ7/6RqIMf60AD5a31h/vru3u7/Nsnuv1980X61tNNmtrSa7vU1btrm5ttncov1/eG9nZ2efZdmXlPWkISiogq5U4Js/PHqgF2tWDg4OGr8A+JzEMQBi4H8AAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;finder&quot; title=&quot;&quot; src=&quot;/static/14e1551ef10bf73defc433a40711433c/42603/finder.png&quot; srcset=&quot;/static/14e1551ef10bf73defc433a40711433c/f931c/finder.png 200w,
+/static/14e1551ef10bf73defc433a40711433c/e8031/finder.png 400w,
+/static/14e1551ef10bf73defc433a40711433c/42603/finder.png 800w,
+/static/14e1551ef10bf73defc433a40711433c/ab2cf/finder.png 832w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+  &lt;figcaption&gt;Finder ikonuna bast&amp;#x131;&amp;#x11F;&amp;#x131;mda kar&amp;#x15F;&amp;#x131;ma gelen ekran&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Başta biraz renkli ve karmaşık gelebilir, ancak sadelik karmaşıklığın doruğudur diye bir söz var.&lt;/p&gt;
+&lt;p&gt;Öncelikle git kullanan projeleri (yani hepsini) dev isimli bir klasöre topladım ve finderın yeni pencere açılma pathini dev olarak ayarladım.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/030a10e65ea82056069f4aa119604c6d/052cd/preferences-1.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 457px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 94.52954048140043%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAAsSAAALEgHS3X78AAADdklEQVQ4y6WUy27bRhSGaaWLtmnRuukqyNLboiu78MbpI/QRiu7yBO5rJAi48MJKbKCRe4GDwLLapJYcWxQtyxapG0mJlHgVRepi65ZIIlmeHjKOgTaF2zQD/DgzBPHxP/xnhiBw+A8ezRHvOHRFfzV5cXgUCar8eOcb9VkqyonS/V6jRtqqShaYAplJZ8jcUY7MZo7ILJ0lS4USqSkaKTdkUmko91VFXa8JtW8DhqEZc0RbEN8LFrmnv6/D6CVYdhvSzQnIvQlMhkOwWzbougmKooNlWtC1uzAejmE0GEH/rA/BqJQqvyEiQh1SEUKSlQA49+NPv6wJogQn2ePJd3HJeZDmHbMhOvW67BwcUM5e8rkj1USnylcdgRMcgReCOlVlFQ72D54g4+ONhxsRQhRq13BxbfPhZnQ/mYJUMuWWc8d+8fQU0ocUnByfALYKNEVDpVwBgeMDR+Ecq4ctw96zvQQyPtnc2IwQ6DgEZrPZ6HQ6BVluuIqq+rKigK5poKoqqDhXVQWkeh0Mw4Butxuq0+l4s9kMWJYNgYlE4q/A8WgITIl3mULZP0WHLMNAtVpFCcDzHBQKBZCkOvR6IexqIEVlogAenCgv3BSj+CU2D/k8Ams1OO/3YYgBDQYDhPVC2N8c/voGME3RCHRhtzhwf043/FqFAbZQxJfRlSiiM+my3Qt3VwMzGTrq/+GCbPZcpiL6pSILeWy5WCxCHtsvYwgty7oE/qtDms5EXc+D87Ou27YtXwsD0XAPaqBpuAdtG84u2v1PDoNQhviP8gzrchXO53keuEoFnZWB4zgMRUAApnsB63Y7+IGrWqaxZXcGqtlynzY6fgO3SBBCHwMJahDKZDKBl6jZdAJnoync259644kDxcI/pExnqPX+eAYN3ZpKuuHh/vNM0/Qsy8La8lqtltdsNsNnLZTRND2GN2aDwRAdMnFkfBqPx0NgcPQiZTb3aICL0/o5nLdbgACwwhB6gECw8R8azSa224Y2tt7GM2/qSniWBUF4HjhMJpMRolQqBbfN+3fv3rvz5PH27lbsh51YbGt3a+uVYrHY5fz1+vUzfG9ne3s7sba29n0AXF1dDW8uYmFh4QMsN1FfoL56S32JujU/P389hOHXghJZXFz88Pbtrz9bXFr6fOkttLKycmN5efmjC8YbF+/c/9Tl+BP1R6PfvOSU8QAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;preferences 1&quot; title=&quot;&quot; src=&quot;/static/030a10e65ea82056069f4aa119604c6d/052cd/preferences-1.png&quot; srcset=&quot;/static/030a10e65ea82056069f4aa119604c6d/086a3/preferences-1.png 200w,
+/static/030a10e65ea82056069f4aa119604c6d/a2ca7/preferences-1.png 400w,
+/static/030a10e65ea82056069f4aa119604c6d/052cd/preferences-1.png 457w&quot; sizes=&quot;(max-width: 457px) 100vw, 457px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Ama yukarıdan da göreceğiniz üzere kendi projelerim, iş projeleri, okumak/incelemek için indirdiğim projeler derken dev pathi karmakarışık bir hal aldı. Neredeyse 1 buçuk yıldır kullanmadığım ve “ne işe yarayacak ki” dediğim etiketler imdadıma koştu.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cffdba3186ae9722a678efbc01824d9f/ff019/preferences-2.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 456px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 141.00877192982458%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAcCAYAAABh2p9gAAAACXBIWXMAAAsSAAALEgHS3X78AAAEgElEQVRIx6WWy27bRhSGZblonQbtIos4sDcGij5HCy+7a4G+Tjd9h0AN0LIGmk3qZlEgCVIVvsSyRFIX6kbKkmhdbUkWRVK8SBQ5Ik/P0HUcx1LSoAP8mCHI+fjPmTOHjESweY92ViL/s2mKdjmwDo+jtD99+ue37fj+jliXH+rNemzY6cSErBBLHadiaTYd45JsjGf5WLkoxjqtTqzVaFE9xPHOiXTyPWXoqr4SsVrdj+hF8TDxM3hzUEYa/CWrUL8wYGoYcNG/gG63B61WFy56AxgNVZiYE7AMC8baGGgrCIXfKEOuyasRdWxQ4MqLl/FHnfM+FPMF57vHWe+nv7NeryF7stzwDg8T3t7+oYcTvGql6qGjKznoEOIv478i4xM2xUYjymC4iherT3//g5FKIqQ5nuy/eBZwiQQkj1OQTWeBS3GhxLIEkogqX0osi6Tb7sLzZ88fI+NOLpuLRtBxCOQ4lnEcFxrNNul0u0Gr3cZltqDZbIa9LMvheDgcgqIooYbKkHieBxzHhcBer3cNTLFpxrEUqJQ4ksnkA0HIvYa0Wk2oVmv4sgaYpvla4/GYzOdzYFk2BJ6fn18DX/EZBowh6MIxkeRGYOg6BEEAvj9H+f+OfaCOXNcNe9u2Cd2UhcCjFAJnCuh1jpQq9WA6nQIhJJy4SPSe4zg3gDeWnEyyzNyfQLtTIaWiFBiYMtTJbDZbKuqQOl/oMJPgGAVs4AdlUimKgT2ZAI0PdbJI8/l7HPLJI0bH23x9QOonUjB1HJi9yyHem04snLHEYZJNMsF0Dj25S2pyPVCUUehwWQzn6HI4dggJANNmgcPsUYrpgQtHwxqpFsqBNbFDII3j26LuYO4C2yZEnwFk+dRthyk+xbiGB3LhlEgnYtBud8Cy7DBey4DZjkfG7jXwhsNXXJYBuweG+IqUq/Wg3+8DTZ038+5KM9cD8F3IvAuYYI8ZmAYwEFukIBaDEcaQJvLbsDeB3FtLvgE8TiLQBzA0k6iaGqiqBjQXl8lEKZpByNwHbuEuJ5OMH/hgT2yC5xSBKizSaDS6LA7Yj0YKweqwOG14nmdUfIhjOSIIAhaHAuQEAfJ5AYqFIuRyAmSzuXBcrVahLIpQKonEsm1I8/xtIJYgxjItKOTzpCJVgpNKBSooCVWv1UGScCxJcHraCEvYYDCgulG+bi2Z5h0uh5z1sR6edWGkY7zQtaGhdBXGqgE6ViFN02jpCoF005YBf3FmDoz6IzdjFHxWafpc3/Wdo4Rv1VjfbOV8NW/7pmmgTN+yLB+B3gTPPMaQflPunJ2dhUD6TYmm0+nH9KDTN7szTJUwXVygMdKoK30MpmVepg2eZeqM7jZtuVxulwIxFNEI7hx1+PGTJ09+yGQytYODg8Le3l55f3+/vIei/QHVweX4TeGzRTRS3d3d/REZn8bj8fCTHLl3795d7L5AfYX65gP1NerLtbW1uyFse3ubdqvr6+ufPXjwYB3hGx+i9cv2OWXcv3//+lcCYStbW1vRzc3N6MbGxn8WnUPnXnH+AfTwAtRrlbcGAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;preferences 2&quot; title=&quot;&quot; src=&quot;/static/cffdba3186ae9722a678efbc01824d9f/ff019/preferences-2.png&quot; srcset=&quot;/static/cffdba3186ae9722a678efbc01824d9f/dc2c9/preferences-2.png 200w,
+/static/cffdba3186ae9722a678efbc01824d9f/160ae/preferences-2.png 400w,
+/static/cffdba3186ae9722a678efbc01824d9f/ff019/preferences-2.png 456w&quot; sizes=&quot;(max-width: 456px) 100vw, 456px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;5 ana başlık belirledim, bunları yanda görüyorsunuz. dev pathindeki her projeyi bu etiketler ile etiketledim. Sadece dev pathi ile kalmadı tabi bu. Örneğin google drive klasörümde bulunan bir kitabı da Read etiketiyle etiketlediğim zaman finderdaki sidebardan sadece Read kısmına basarak erişebiliyorum, hangi pathte olduğu önemini yitiriyor.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/d5a1dbd1a87fb2db9b7a83138fe472c2/ab2cf/tags.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 79.8076923076923%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACQ0lEQVQ4y5WT0XKaQBSGTdqH6U3foDNlpnmHVh0zk8YH8jl6ETLTF+g0Nu0kpkaJKaKwQBDBBQQEQZE9XUhRk8lF+Yd/WHY53549HCoVKvT17E27c340FNF7WUTMeCQy2MSMqjwwClIZoSswvW6PkcYS80DnNFXLx9JIYhB9XxTEI3Ekvq0UEn5efrHdB+B5IaVAMKcGXF91QEYyTCdTQAICVVEBzzAosgKyJAPdMPdEm5D1ag3iWPy2BXa6Xdb3AnAwTlTTJjdIJ9ztLdH1KfE9nziaQ8IwoA6J7/u5wyDMn4NFsAEqVVXbFPUqB3L9PmtZFth4luj+krSRSaTRiLiuR6IwIitrTQjQC+Al50Dbti+2QJ7nWdfzAI3HCTJtuNFscB0bks0mx8R2DGma0jF5yTkQY7zLcHB3xxqGAaqMkqkfwm/dAUWSAMkyZPVZOStISZrF5ZB9FUB6wr0jcxw7d10w9QkFLuGXaoE4HMLc9fKgpRmVA/ZpDf3FAizTyGoIlwoGTaHZJckj0CgJ/HN/z67iFZ3EibsIwI3pMePHumVK1+kW9H8ZDvosLS8sl1ESRUt4rmytFLA34lndm4Nj2UkUR0++aAEpBZQGHBtgE4wZTuIoIhRISqhom10f9q6uzzX6y/HD4cY0TSiporF/7PqQG5xZ2AZREhO6QCKaZRzHT+7Px3vOgbqufy+Ah5+qH9+dNk+bx43jk2q1+rlWq5XxSaPRaNbr9Q+U9boia3IGPcjA/3Y4LOki5qDValX+ApD4zQynpkTFAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;tags&quot; title=&quot;&quot; src=&quot;/static/d5a1dbd1a87fb2db9b7a83138fe472c2/42603/tags.png&quot; srcset=&quot;/static/d5a1dbd1a87fb2db9b7a83138fe472c2/f931c/tags.png 200w,
+/static/d5a1dbd1a87fb2db9b7a83138fe472c2/e8031/tags.png 400w,
+/static/d5a1dbd1a87fb2db9b7a83138fe472c2/42603/tags.png 800w,
+/static/d5a1dbd1a87fb2db9b7a83138fe472c2/ab2cf/tags.png 832w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+  &lt;figcaption&gt;&amp;#xD6;rne&amp;#x11F;in Review&amp;#x2019;a t&amp;#x131;klad&amp;#x131;&amp;#x11F;&amp;#x131;mda etiketledi&amp;#x11F;im t&amp;#xFC;m projeleri g&amp;#xF6;rebiliyorum&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;p&gt;Dosyalarımı yedeklemek için Google Drive kullanıyorum, bir süre önce Backup and Sync from Google ismine dönüşen program ile artık bilgisayardaki herhangi bir pathi de yedekleyebiliyorsunuz.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/5e892a570e5fcfa9aff9fcbef2b86990/ab2cf/drive.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 79.8076923076923%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACEElEQVQ4y6WT227aQBCGSdqH6U3foFItNa+QIoGQQpUH4jl6EUfqC+SoSg2piokPYHwkBh/BxmcWdrp2a6Btbii/9Mvj1cy3o93ZWo1I+XLx5q57eTKQlPeqpFCSKFG25VBTfUw9DjXq9rFP/XjoUuJApMbamBqTdXkkU7IoU0qRP5ROSM3bWqXB1/vPrj8GXhiuCRCsqQkP37qgyQpIugFPvAiaooJlWqCrOqiyCo7llDaeDbzMlyCNpKsN8HuvR0dhAr7noWd3jruygQWOw543w0kc4UUQ4DiKcRzHeLFYlK7+ozBaAZGu63cE9aoE3lxf04IgwJDnEKtP8JVkYpHncZbnmORitFrhQkX8gkug53m3G2CPdGhZFrAsizRjAk6UQp5lRR4UnPV6XbqIX3AJdBxn2yHHsbRt26BqGkqTBCr9ago2xbtrOzkl0HXdLbDfZ2jf98EwDBTFMax3OvgvIMMwdBiGYFoWIgf9T/HeQJ7j6DzLi3NAURQdDmRYhiYlkCYpStPkcGBPHNDTYA4z10Mpud2DgfITQ0e2CVPLLm4ZkxHBe6gam+0casPRZRaE4M1mK7Rcwp6qBvt+AxT4wYU/D4rngwLyzNI0xVmW/fH9O95xCZxMJjcV8Pj04+m7s/bZebPRbNfr9U+NRmMft1ut1nmz2fxAWK9rI00qoEcF+PcOx3u6qjnqdDq1n2Is0RW/xZuqAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;drive&quot; title=&quot;&quot; src=&quot;/static/5e892a570e5fcfa9aff9fcbef2b86990/42603/drive.png&quot; srcset=&quot;/static/5e892a570e5fcfa9aff9fcbef2b86990/f931c/drive.png 200w,
+/static/5e892a570e5fcfa9aff9fcbef2b86990/e8031/drive.png 400w,
+/static/5e892a570e5fcfa9aff9fcbef2b86990/42603/drive.png 800w,
+/static/5e892a570e5fcfa9aff9fcbef2b86990/ab2cf/drive.png 832w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Drive klasörümde kitaplar, okuldaki projeleri içeren klasör, sunumlar, ekran görüntüleri ve sketch dosyalarını içen klasörler var. Ekran görüntüleri dikkatinizi çekmiş olabilir. Evet macteki ekran görüntülerini drive içerisindeki Screenshots isimli klasörde tutuyorum. Bu sayede bilgisayarı açamadığım durumda bile telefonumdan ekran görüntülerine erişebiliyorum.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/76ab4a32b1692b6ebe2688ec95e0e979/ab2cf/downloads.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 79.8076923076923%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAAB9UlEQVQ4y63TW27TQBQG4LSwGF7YARIj0S2USIkiNagLyjp4qCuxAaCGEogouaiOY3viSxu7vsX3mEwzh7FVJynwQBSO9Mtj68znsXRcq7Gavjt7xvfOj0Rl+lKVp0iRMHJtF5n6DRrKGvrwY4z6ve9IEmVkaAYydANhGSPM+qYK658oR4qkPK9VNbn8/NYLDBDGk5WqTME2Lfja/QaqgkE1ZjAUMWiYPbds0FUdVKyCc+eUub25pcufS1Bk5f0a7F1dcVGYgO84RLM9einpFMsyjeKYpnFCoyCgSZLSNE1pFEVl0of7JE7ugZWu6zyjnpTgcDDgXNcFx7GJF2dUnSc0Y82sr0xR1fovKUHP8y7WoCAIXBgEIEkyKeCqCucfUoKO42xOKFxfc+wBaLpOFovFow3bcLXergpkB9mAPM9zGGMYjUbENM0/Nu8MdrtfOMuygKHlJ+8NiuMxRwgB3/dJlmX7g4NRn6OwAob9H7AviZwZzsF3PbLI8/1BPBpwiW2BeWeTRZbR1WpFd6hqbDZzqE3k8zyMwfP9e7Jcwo5VDfanNTgWxLNgHha/DwnDkLJZpHmeP7r+vt5KCc5ms48VeHj8+vjFSfvktNlotuv1+ptGo7FL2q1W67TZbL5i1tOarCkFelDAD2843DHVnoNOp1P7Bf7e0je9nPk2AAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;downloads&quot; title=&quot;&quot; src=&quot;/static/76ab4a32b1692b6ebe2688ec95e0e979/42603/downloads.png&quot; srcset=&quot;/static/76ab4a32b1692b6ebe2688ec95e0e979/f931c/downloads.png 200w,
+/static/76ab4a32b1692b6ebe2688ec95e0e979/e8031/downloads.png 400w,
+/static/76ab4a32b1692b6ebe2688ec95e0e979/42603/downloads.png 800w,
+/static/76ab4a32b1692b6ebe2688ec95e0e979/ab2cf/downloads.png 832w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Downloads klasörümü de google driveda tutuyorum. Burası da dağınık değil. İndirdiğim dosya saklamaya değer ise bu klasörlerden birine giriyor, değil ise zaten cöpü boyluyor.&lt;/p&gt;
+&lt;p&gt;Open in code adında ufak bir eklenti de kullanıyorum finder içerisinde. Bu ikona tıkladığımda o an bulunduğum pathi VSCode ile açıyor.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/96b9b099ca6d0a2c9a9753816c0cdd93/ab2cf/open-in-vscode.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 79.8076923076923%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsSAAALEgHS3X78AAACzElEQVQ4y5XS2U7bUBAA0JT2Y/rSP6hUS+WxTxVQQUCCqB+E1Keqf1AJDP0CRELpAqhNAsTOtZ14jbfYjtfEzkyvQxLUhy6MNLpjW/d4fD2VCg3x+OBp/Ru7etsVXkhEZBRJZCLPZYaGykiywpxf88yPiyuG8IQxrn4wKhEYUZAYsSswEl0FXlgVusKzyiLI1y8fvZGOPC9MZamPsmzgaeMbdjgROVHHyxuCvV4fbUFE/eAA1XoDLddDe2ChpmowGU9QIMLJEqyffWZ13US138tbRIYPJxq8P2zDuyMR3n1S4bhuQV9RgFzfQNBuQUTrKEkhjiKIwqhAGrIsNyj1eAY26nWW7/JI+E5+qwygLlmgKyoEoxjCOIVeHALpydDhOJggAt0PZeBdPQNd160vQZ7n2TCKUJakXHZ8vFRtNBQFI3qvDC8Youb66DoOTsbjksOiKEq1zBlo2/Z9h+12mzUGgxloBDFeKA6tRRRFCW2KBKk3Q6bTKd41hgtsCTqOcw+2Wi3W8300dS03Rgl+7pnYF0UkREDDtFCixwTTYgn9E2w2m+woDNExB3PQQtLpINfh0HGHaAYT2t0DwNubGzbLxjh07Fynn/xddVAiBIeeh3GcYOgXs8/9/w6vmyx9hJM0za0oxSvNpTNmYNl1GWbg/wb9E/zZ5Vg98DBw3dyMMzzvW+V5oq4b6AcBahEFH9Kh2G6yoTVA27JyM8qgIQ2gy3WAjhNougEDL6H/pJjvvwt6BItyMTb3c9jnyVEWhOh7w8LNCvwi26gpMo5GIZZH4aQ2/iUWg322BDu33KHvBSWSa8MRnAsauJYFcZJAQtMzA0jSBLIsgzRNl+s8Z6Cu66cLcGV9Y/357t7u2+1qde/1+pvaq7WNWnVrq1bd3qZrtba5tlnbotd/yL2dnZ231Wr1JbWeVEhfKNFHJTx/w8oDc7Hn0f7+fuUXyRu+MqCBqGgAAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;open in vscode&quot; title=&quot;&quot; src=&quot;/static/96b9b099ca6d0a2c9a9753816c0cdd93/42603/open-in-vscode.png&quot; srcset=&quot;/static/96b9b099ca6d0a2c9a9753816c0cdd93/f931c/open-in-vscode.png 200w,
+/static/96b9b099ca6d0a2c9a9753816c0cdd93/e8031/open-in-vscode.png 400w,
+/static/96b9b099ca6d0a2c9a9753816c0cdd93/42603/open-in-vscode.png 800w,
+/static/96b9b099ca6d0a2c9a9753816c0cdd93/ab2cf/open-in-vscode.png 832w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;apps&quot;&gt;&lt;a href=&quot;#apps&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Apps&lt;/h3&gt;
+&lt;p&gt;Kullandığım yardımcı araçları anlatmaya başlayabilirim artık. 😄&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/94fdf9dd0de88736f48f10f8a9384e43/0685b/utils.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAADBElEQVQozx2O2U/TAADG+4IH0TFH12PrsbYbG2UraBE1xiuOwwkiooBT0QEDnCLbBByIDDrWtV2vdRvifSUmnonHk4lvJr7pg4+++Kc4Tb7H3/f7PmCFNW4HzLWWUi5ULrRVxVBlvVXN7y7JezeLHZsKXy2ErPUWa5U1l/z6YkC75VdTXmWekVOUBKS4iqD8ud7xbOPyy08bX1OM/vh9QkutLPj1+EAixZVftlx7RlxKh+5///x7JXxvNPI2uvZrEhMnaRmIt1YmBr6M8Q/nup7krrybZivJy5lUj1gBV4VAMh6qLDYvz/syMbYqjH2c2GMNtj0+E/4YpQojteVhrlQdT1zcq8bbJaErc5q2ytlvSwOvcrao3JMZIuWk9iOt/xz2iq/Vp2NHHw0ytydD012kFqElIOw3F3qzEc6KdayLkVthurQ0/SYx/HCWP7/cOxJjsurIu2ziwylOzl7J9fJWJCCMts/tJ9RDHgngm017ZrZtvx44ITrT6SPNdzsIY+iksHZj0rwwZPDnslvGugnlAGsF3RZP6zxjch6L98i7CQlg/SVyJtPCG1y36p+5E2Yq85D4oH1cmz0uTgSrh1sF6HS3V+F8FuczgrQRpLQgWWQJhcUkgKHMALrRRJUDVDVI3D3hkYTG5L2BeG6xLxOjcyf5ZXioG8s1eUte2mA8BkNqDK4ymOJ1SQBOGjhtEJRF0Bbhsyim5G3SD3cqM+evzkejC619afsw7y6QHgMnTQw3MEzD3EUclXBEBBBMQ3ADIUoIadWCespOqsqi0irSH/fHBhunpLoJzmU4cRNxm7BLhxENgRQEklAwD0CIBqE65DJAzARxswbZCauvUXgBnO2xpUm3EmtIHgDXHS4ThjUY0hCwiDpk1C66bHkABhXYqUKwBsG6E9FrIgdidtbfuVo353OaO+HavWQTmIdBDXGoqL3ossnYjgJen8e35wBXg4TuklFHEWlU0f+EGzMP9j7v5G8G9k0d688c6d9EbZK7QXX/q0l4fYHYlse3Cvi27F9oHgRb0nCL7wAAAABJRU5ErkJggg==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;utils&quot; title=&quot;&quot; src=&quot;/static/94fdf9dd0de88736f48f10f8a9384e43/42603/utils.png&quot; srcset=&quot;/static/94fdf9dd0de88736f48f10f8a9384e43/f931c/utils.png 200w,
+/static/94fdf9dd0de88736f48f10f8a9384e43/e8031/utils.png 400w,
+/static/94fdf9dd0de88736f48f10f8a9384e43/42603/utils.png 800w,
+/static/94fdf9dd0de88736f48f10f8a9384e43/5b8b9/utils.png 1200w,
+/static/94fdf9dd0de88736f48f10f8a9384e43/0685b/utils.png 1440w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;VLC, Shazam gibi bilinenler haricinde diğerlerini açıklayacağım.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Backup and Sync from Google&lt;/em&gt;: Google Drive uygulamasının yeni adı.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;KeepingYouAwake&lt;/em&gt;: Caffeine isimli bilgisayarın uykuya dalmasını engelleyen uygulamanın open source muadili.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;4K Video Downloader&lt;/em&gt;: Youtubedan video indirmek için kullanıdığım araç.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Mos&lt;/em&gt;: Yakın zamanda klavye ve mouse alarak evde maci masaüstü gibi kullanmaya başladım ancak ben scroll directionı natural kullandığım için mouse kullanırken reverse scrolling yapmam gerekiyordu. Ayrıca magic mouse olmadığı için smooth scrolling de yapamıyordum. Arayışlarım sonucunda bu uygulama ile iki sorunu da tek seferde çözdüm.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Kap&lt;/em&gt;: kısa gifler hazırlamak için kullandığım menübar uygulaması.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;App Cleaner&lt;/em&gt;: Birkaç mb olmasına rağmen kaldırmak istediğiniz uygulamanın işletim sistemindeki tüm izlerini silmenize yardımcı oluyor.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Itsycal&lt;/em&gt;: Ufak, sade bir takvim uygulaması.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Shiftit&lt;/em&gt;: Gün içinde en fazla kullandığım uygulama olabilir. ctrl+alt+cmd ile c / m / - /+/ sağ / sol / yukarı / aşağı gibi kısayolları olan pencereleri hizalamanıza yarayan efsane bir open source uygulama.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ShowKeys&lt;/em&gt;: Hangi tuşa bastığınızı büyük bir şekilde konumlandırdığınız pencerede gösteren uygulama.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Spotify Notifications&lt;/em&gt;: Ben spotifyı 3. desktopta kullandığım için ismini bilmediğim bir şarkıda git gel toplam 4 defa kaydırma yapmam gerekiyordu. Bu yüzden githubda bu uygulamayı buldum, her yeni şarkı başladığında bildirim olarak gösteriyor. (eskiden spotify içerisinde olan bu özellik daha sonra kaldırılmış.)&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;terminal&quot;&gt;&lt;a href=&quot;#terminal&quot; aria-hidden class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Terminal&lt;/h3&gt;
+&lt;p&gt;Terminali full screen kullanan kişilerdenim, İkinci desktopta iTerm2 her zaman açık halde bekler. Mac kullananların bildiği üzere full screen appler yeni bir desktop olarak açılıyor. Ama hem ikinci desktopta hem de full screen nasıl kullanılıyor diye sormuş olabilirsiniz, iTerm2nin ayarlarında native full screen windows tikini kaldırdığınızda artık bulunduğunuz desktop içinde full screen kullanabilirsiniz.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/dbb68f7ab849843f5308b33ba9e55153/0685b/terminal.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAIAAAAmMtkJAAAACXBIWXMAAAsSAAALEgHS3X78AAACJUlEQVQoz32O/08SYRzHcYFuqZDYqlWStWzLzhhxdwj2hfFFEFojpLW+rDalfo5aWf4QzTHdyum/1WxagwvlvsOdcMfdgRURrl/6AFu4pT177dn7+fJ63o/ujMN/EvWcxrxDAO61OPxDuO+Y9br5kmsQmWgD+YTNPewMDI8HzjoDcOGU3WvBJ3VGNASY0FCvLahHvHrEY0C83WM+oOeyvx0AQ+uo70qw3z5ltIdMWNPSHUGnAKM9aLkWccae4NNAHI/GsWgcjcxg0dkWzR3YP+66ZbIHB1oK0JTNeNiAeGLxxManj2tr69mvm0DmS3pj/TPH8CzNMRRDkwzM2O2ZnjGvGQ915EE8rB91P0i85TmepunitigUJUZQ0sQmmcsBgiAoiqKpyngs3oN49pEfPn/HF0SKomiaKZVKsqLlKJbjWJ7nYMiyXK1WQO7+VzaMuu89S5J0noFqhink82VFyZEUaFBbLpdVVdVU9cDmRy+SYoGHXlEUWZbdLsnZLZIgMvCYJEmaplU07UD5fiK5RTKZdJogssViSZakNIwMAf3wEZITaE503dnv24cu3pidS9V2KrJU+lat7FS03V/137uNRv0nALn243ujXrt692lLDnfkASx02OpHI4/nF1deLryfSy2/WvjwOrUMyzeLK/NLq00gL62e80z32Sbhfkdu+71Wn27E1XVhomukCWTdeVdz3hP6bYG/Zkdu+0cdN//PXhP4A71fRF60BmtxAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;terminal&quot; title=&quot;&quot; src=&quot;/static/dbb68f7ab849843f5308b33ba9e55153/42603/terminal.png&quot; srcset=&quot;/static/dbb68f7ab849843f5308b33ba9e55153/f931c/terminal.png 200w,
+/static/dbb68f7ab849843f5308b33ba9e55153/e8031/terminal.png 400w,
+/static/dbb68f7ab849843f5308b33ba9e55153/42603/terminal.png 800w,
+/static/dbb68f7ab849843f5308b33ba9e55153/5b8b9/terminal.png 1200w,
+/static/dbb68f7ab849843f5308b33ba9e55153/0685b/terminal.png 1440w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Tabi her seferinde -cmd+tab olmadığını varsayarsak- docktaki ikona tıklamak zahmetli olacağı için Pointer menüsü altından iTerm2’ye bir hotkey atadım (ctrl+t). Bu sayede hangi desktopta olursam olayım ctrl+t’ye basarak terminale geçebiliyorum. Tabi bir sorun daha var, mac klavyelerinde ctrl tuşu çok saçma bir yerde. Ben bu tuşu caps lock ile değiştirdim. Bu sayede serçe parmağımı saçma sapan bükmeden rahatlıkla ctrl tuşuna basabiliyorum.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Githubdan çektiğim dosyaları dev pathi altına çektiğimi söylemiştim. Ama terminalde cd yaptığım zaman ~/ pathine dönüyordu. Bunun için ve başka şeyler için de birkaç alias yazmam gerekti.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/864cfc5b5ebd5006545c3478f5cd565c/31235/alias.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 673px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 37.295690936106986%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAHCAIAAACHqfpvAAAACXBIWXMAAAsSAAALEgHS3X78AAABBElEQVQY042Qy07CYBCF+wAGqOjClpp0YaJEvP0z0yttbFAKJfQGBqyK3GxIqonvv/GvxoSVmHyLMyc5k5kjmKEN8VTv5hqsTcqRVj59XuFrBboi9Gp/IhhDWxtlblhouO7QxwlOROjXIajtSpZhM7L10ZPrFciWHr2rON6Dex4W/xN2EgvTqeMWFuQeFSqMz/H5DLN96Is76AmX/m3TD5pW1oLZKT4ewECGmG+tgl/ZovrLtiOwwLmOJkZnY7K8RS8MFxc4a9Pmhua8P7sUC53edCrrBFpqtOLfcV/FB0G27qT2UDFShSUSRD8omBxB2IC4UYqI3yJjzEfpWx9jyvUhDL4A6g9cmCGtNoQAAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;alias&quot; title=&quot;&quot; src=&quot;/static/864cfc5b5ebd5006545c3478f5cd565c/31235/alias.png&quot; srcset=&quot;/static/864cfc5b5ebd5006545c3478f5cd565c/08de0/alias.png 200w,
+/static/864cfc5b5ebd5006545c3478f5cd565c/e3ece/alias.png 400w,
+/static/864cfc5b5ebd5006545c3478f5cd565c/31235/alias.png 673w&quot; sizes=&quot;(max-width: 673px) 100vw, 673px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;En alttaki png ve jpg aliasları aldığım screenshotı hangi dosya formatında kaydedeceğimi belirlemek için kullanıyorum. Örneğin twitterda png yerine jpg resim yüklüyorum çünkü png bazen patlıyor.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Şimdilik aklıma gelenler bunlar, aklıma geldikçe eklemeler düzenlemeler yapmaya çalışacağım. Sizin de bu tarzda iyileştirmeleriniz varsa paylaşmaktan çekinmeyin.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[iPhone X ve Garip Tasarımının Nedeni]]></title><description><![CDATA[Dün twitterda vakit geçirirken  Yasir Buğra Eryılmaz ’ın floodun gördükten sonra bunu görselleştirmek istedim. Flooda aşağıdan…]]></description><link>https://ergenekonyigit.github.io/iphone-x-tasarimi/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/iphone-x-tasarimi/</guid><pubDate>Sat, 16 Sep 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Dün twitterda vakit geçirirken &lt;a href=&quot;https://medium.com/@yasirbugra&quot;&gt;Yasir Buğra Eryılmaz&lt;/a&gt;’ın floodun gördükten sonra bunu görselleştirmek istedim.&lt;/p&gt;
+&lt;p&gt;Flooda aşağıdan ulaşabilirsiniz.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://twitter.com/yasirbugra/status/908501033424494593&quot;&gt;Flood&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Yıllar boyunca birçok yerde telefon ikonu için aşağıdaki (solda) iPhone ikonu kullanıldı. Ancak son yıllarda akıllı telefonlarda çerçevelerin kapladığı alanı azaltma yarışına girildi. Apple da buna kayıtsız kalamadı ki 12 eylül 2017’de düzenlenen Keynote’unda iPhone X adında radikal tasarım değişikliklerine sahip bir cihaz tanıttı.&lt;/p&gt;
+&lt;p&gt;Tim Cook’un iPhone X’i tanıtırken söylediklerinden anlaşılacağı üzere yeni iPhone tasarımını uzun bir süre göreceğiz.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The first iPhone revolutionized a decade of technology and change the world in the process. Now 10 years later, it is only fitting that we are here in this place on this day to reveal a product that will set the path for technology for the next decade.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/0c762/iphone-old-new.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAABK0lEQVQoz82SzU6DUBCFeVQfoitfwa1ujFs16rpNjN24MSmh2pJUmzaWn9ACxf5AusAWZjzjxQbYaTfenITvzOHAYq7GBxwtJ3k829S4zo7vRI2rDBZDFeGkOx4FZLoiAGxRznJ53Jt00sovHkUAWAwRqf6LQy2Tbjp026Fmn2DVp4s/913y1rzZigCwKlapYdF7xHEqAhiTarlr0avPs1gEgC2XYd9+UoBh1co2DQMOEhGga9fLQ7+U/quyz2EiAvy6PJ6zH4sAtTLWPg452ojKabFnbO/oPDtr56cPOaDZq+xZn5Bu8SgUAfT9qug7nq7o8ilvDwgCTJcyRaTu2DyR9fQcESCMWaXaQXd7f3vtiL0Fz1bsfPDnrvJSupWht2R/ze5CbKX8t/MF6eJVoZ12CaMAAAAASUVORK5CYII=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;iphone old new&quot; title=&quot;&quot; src=&quot;/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/42603/iphone-old-new.png&quot; srcset=&quot;/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/f931c/iphone-old-new.png 200w,
+/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/e8031/iphone-old-new.png 400w,
+/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/42603/iphone-old-new.png 800w,
+/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/5b8b9/iphone-old-new.png 1200w,
+/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/c7ea5/iphone-old-new.png 1600w,
+/static/cd595b7b31cb05e5c5dd4766d3aa8fd8/0c762/iphone-old-new.png 2000w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+  &lt;figcaption&gt;Y&amp;#x131;llard&amp;#x131;r g&amp;#xF6;rd&amp;#xFC;&amp;#x11F;&amp;#xFC;m&amp;#xFC;z iPhone ikonu (solda), ve &amp;#xF6;n&amp;#xFC;m&amp;#xFC;zdeki g&amp;#xFC;nlerde s&amp;#x131;k&amp;#xE7;a g&amp;#xF6;rmeye ba&amp;#x15F;layaca&amp;#x11F;&amp;#x131;m&amp;#x131;z iPhone ikonu (sa&amp;#x11F;da)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Son yıllarda çıkan android telefonların genel görünümü aşağıdaki şekilde (solda). İki farklı ikona bakıldığında hangisinin iPhone olduğu rahatlıkla seçilebiliyor. Apple’ın da bu yeni-garip tasarımda başarmak istediği buydu ve başaracakmış gibi gözüküyor.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/91500881db575c7524c550ac1b331dce/0c762/android-vs-iphone.png&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsSAAALEgHS3X78AAABF0lEQVQoz9WSzU7CUBSE+/7P4NpElxrcayKGhoKgCUiRUlLpDwi2ohYN5zhjm6ttTEx05cmXdKZzp4veY+kfxhLhY77Wo440ugQCFlNEmPxNR5H0ZwQCtizvPk6c3chxT87HBAIWLxEVadeXk74ctOSwJY2ewBapZWJvqetnAtGZVsptT24XmuYEoj2plh1PBqGGGRlEPP21XKTzlECY9LM8DDXKyDCirZW/Tf93Gb93FGvySCBqfxvWjXWxIW6izrRabo7F8XlJAKLpVsr2RGyPHwUQdu2qrgPZO93tXxCIq6CMix1LMl7PpU8g4rTcP8ssKpZukxOzfT/vtlEvWw1WerfSp239UP6q/pJp+KCze9p6+RfzDr3hWrQah0PIAAAAAElFTkSuQmCC&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;android vs iphone&quot; title=&quot;&quot; src=&quot;/static/91500881db575c7524c550ac1b331dce/42603/android-vs-iphone.png&quot; srcset=&quot;/static/91500881db575c7524c550ac1b331dce/f931c/android-vs-iphone.png 200w,
+/static/91500881db575c7524c550ac1b331dce/e8031/android-vs-iphone.png 400w,
+/static/91500881db575c7524c550ac1b331dce/42603/android-vs-iphone.png 800w,
+/static/91500881db575c7524c550ac1b331dce/5b8b9/android-vs-iphone.png 1200w,
+/static/91500881db575c7524c550ac1b331dce/c7ea5/android-vs-iphone.png 1600w,
+/static/91500881db575c7524c550ac1b331dce/0c762/android-vs-iphone.png 2000w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+  &lt;figcaption&gt;Son y&amp;#x131;llarda android telefonlar&amp;#x131;n genel g&amp;#xF6;r&amp;#xFC;n&amp;#xFC;m&amp;#xFC; (solda), yeni iPhone ikonu (sa&amp;#x11F;da)&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;Edit: The Verge’de de bu konuyla ilgili bir yazı yazılmış. &lt;a href=&quot;https://www.theverge.com/2017/9/14/16306244/apple-iphone-x-design-notch&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
