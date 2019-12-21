@@ -1,1 +1,0 @@
-# ergenekonyigit.github.io
