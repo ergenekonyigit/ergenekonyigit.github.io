@@ -1,6 +1,5 @@
 import React from 'react'
 
-import profilePic from './profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
@@ -14,11 +13,11 @@ class Bio extends React.Component {
       >
         <p
           style={{
-            maxWidth: 310,
+            maxWidth: 320,
             fontFamily: 'sans-serif',
           }}
         >
-          A developer currently living in Istanbul.
+          A developer currently living in Istanbul. Working as a Software Engineer at Trendyol.
         </p>
       </div>
     )

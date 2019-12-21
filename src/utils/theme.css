@@ -107,7 +107,7 @@ pre[class*="language-"]::selection, pre[class*="language-"] ::selection {
 .token.tag,
 .token.operator,
 .token.keyword {
-  color: #ffa7c4;
+  color: rgb(127, 219, 202);
 }
 
 .token.boolean {
@@ -151,7 +151,7 @@ pre[data-line] {
 }
 
 body {
-  background: #fafafa;
+  background: #000000;
 }
 
 h1, h2, h3, h4, h5, h6 {

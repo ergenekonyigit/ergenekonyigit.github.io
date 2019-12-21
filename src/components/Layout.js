@@ -44,7 +44,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: '#000000',
+              color: '#ffffff',
             }}
             to={'/'}
           >
@@ -57,7 +57,8 @@ class Layout extends React.Component {
       <div
         style={{
           fontFamily: 'sans-serif',
-          backgroundColor: '#fafafa',
+          backgroundColor: '#000000',
+          color: '#ffffff',
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(30),
