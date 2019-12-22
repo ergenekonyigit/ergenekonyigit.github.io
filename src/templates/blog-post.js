@@ -16,12 +16,12 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const { previous, next, slug } = this.props.pageContext
-    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/master/src/pages/${slug.replace(
+    const editUrl = `https://github.com/${GITHUB_USERNAME}/${GITHUB_REPO_NAME}/edit/blog/src/pages/${slug.replace(
       /\//g,
       ''
     )}.md`
-    const discussUrl = `https://mobile.twitter.com/search?q=${encodeURIComponent(
-      `https://ergenekonyigit.github.io${slug}`
+    const shareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+      `${post.frontmatter.title} https://ergenekonyigit.github.io${slug}`
     )}`
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -41,8 +41,12 @@ class BlogPostTemplate extends React.Component {
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>
-          <a href={discussUrl} target="_blank" rel="noopener noreferrer">
-            Discuss on Twitter
+          <a href={shareUrl} target="_blank" rel="noopener noreferrer">
+            Share on Twitter
+          </a>
+          {` • `}
+          <a href={editUrl} target="_blank" rel="noopener noreferrer">
+            Edit on GitHub
           </a>
         </p>
         <h3
