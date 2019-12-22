@@ -16,14 +16,14 @@ Tim Cook’un iPhone X’i tanıtırken söylediklerinden anlaşılacağı üzer
 > The first iPhone revolutionized a decade of technology and change the world in the process. Now 10 years later, it is only fitting that we are here in this place on this day to reveal a product that will set the path for technology for the next decade.
 
 <figure>
-  <img src="./img/iphone-x-tasarimi/iphone-old-new.png" alt="">
+  <img loading="lazy" src="./img/iphone-x-tasarimi/iphone-old-new.png" alt="">
   <figcaption>Yıllardır gördüğümüz iPhone ikonu (solda), ve önümüzdeki günlerde sıkça görmeye başlayacağımız iPhone ikonu (sağda)</figcaption>
 </figure>
 
 Son yıllarda çıkan android telefonların genel görünümü aşağıdaki şekilde (solda). İki farklı ikona bakıldığında hangisinin iPhone olduğu rahatlıkla seçilebiliyor. Apple’ın da bu yeni-garip tasarımda başarmak istediği buydu ve başaracakmış gibi gözüküyor.
 
 <figure>
-  <img src="./img/iphone-x-tasarimi/android-vs-iphone.png" alt="">
+  <img loading="lazy" src="./img/iphone-x-tasarimi/android-vs-iphone.png" alt="">
   <figcaption>Son yıllarda android telefonların genel görünümü (solda), yeni iPhone ikonu (sağda)</figcaption>
 </figure>
 
