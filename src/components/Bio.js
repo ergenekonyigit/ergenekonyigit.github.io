@@ -1,5 +1,6 @@
 import React from 'react'
 
+import profilePic from '../assets/profile-pic.jpg';
 import { rhythm } from '../utils/typography'
 
 class Bio extends React.Component {
@@ -11,13 +12,24 @@ class Bio extends React.Component {
           marginBottom: rhythm(2.5),
         }}
       >
+        <img
+          src={profilePic}
+          alt={`Ergenekon Yiğit`}
+          style={{
+            marginRight: rhythm(1 / 2),
+            marginBottom: 0,
+            width: rhythm(2),
+            height: rhythm(2),
+            borderRadius: '50%',
+          }}
+        />
         <p
           style={{
-            maxWidth: 320,
+            maxWidth: 330,
             fontFamily: 'sans-serif',
           }}
         >
-          A developer currently living in Istanbul. Working as a Software Engineer at Trendyol.
+          A <b>developer</b> currently living in Istanbul. Working at <b>Trendyol</b>.
         </p>
       </div>
     )
