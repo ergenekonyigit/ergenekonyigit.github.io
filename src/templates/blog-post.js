@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
           {` • ${formatReadingTime(post.timeToRead)}`}
         </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div style={{ fontSize: 18, color: 'rgba(255, 255, 255, 0,5)' }} dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>
           <a href={shareUrl} target="_blank" rel="noopener noreferrer">
             Share on Twitter
