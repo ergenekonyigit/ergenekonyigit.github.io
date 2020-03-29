@@ -26,7 +26,7 @@ class BlogIndex extends React.Component {
                 style={{
                   fontFamily: 'sans-serif',
                   fontSize: 18,
-                  color: 'rgba(255, 255, 255, 0,5)',
+                  color: 'rgba(255, 255, 255, 0.5)',
                   marginBottom: rhythm(1 / 4),
                 }}
               >
