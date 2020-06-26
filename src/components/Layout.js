@@ -57,7 +57,7 @@ class Layout extends React.Component {
       <div
         style={{
           fontFamily: 'sans-serif',
-          backgroundColor: '#000000',
+          backgroundColor: '#1c1e21',
           color: '#ffffff',
           marginLeft: 'auto',
           marginRight: 'auto',

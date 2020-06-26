@@ -134,7 +134,7 @@ pre[data-line] {
   margin-left: -1em;
   padding-right: 1em;
   padding-left: 0.75em;
-  border-left: 0.25em solid #000000;
+  border-left: 0.25em solid #1c1e21;
 }
 
 .gatsby-highlight {
@@ -151,7 +151,7 @@ pre[data-line] {
 }
 
 body {
-  background: #000000;
+  background: #1c1e21;
 }
 
 h1, h2, h3, h4, h5, h6 {

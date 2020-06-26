@@ -60,7 +60,7 @@ module.exports = {
         name: `Ergenekon Yigit`,
         short_name: `ergenekonyigit`,
         start_url: `/`,
-        background_color: `#000000`,
+        background_color: `#1c1e21`,
         theme_color: `#ffffff`,
         display: `minimal-ui`,
         icon: `src/assets/icon.png`,
