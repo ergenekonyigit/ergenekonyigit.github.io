@@ -45,7 +45,6 @@
 </blockquote>
 <p>Bu seride Trendyol Seller Center üzerinde yaptığımız çeşitli optimizasyonları derleyeceğiz. İlk yazı konusu olarak geliştirdiğimiz UI kütüphanesinde yaptığımız iyileştirmelerden bahsettik. Keyifli okumalar.</p>
 <p>Seller Center, Trendyol içerisinde satış yapan işletmelerin ürünlerini yükleyip düzenleyebildiği, kampanyalar oluşturabildiği, sipariş süreçlerinin bulunduğu, finans metriklerinin takibini yapabildiği çok boyutlu bir platform.</p>
-<hr>
 <h3 id="ui-kütüphanesi-oluşturulması"><a href="#ui-k%C3%BCt%C3%BCphanesi-olu%C5%9Fturulmas%C4%B1" aria-label="ui kütüphanesi oluşturulması permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UI Kütüphanesi oluşturulması</h3>
 <p>2020 başında frontend altyapımızı monolith’ten micro frontend’e taşıdık. Geçiş süreci ile ilgili yazıya aşağıdan ulaşabilirsiniz.</p>
 <p><a href="https://medium.com/trendyol-tech/micro-frontends-how-it-changed-our-development-process-a5cf667356da">Micro Frontends: How It Changed Our Development Process</a></p>
@@ -87,15 +86,11 @@
   <figcaption>Dosya yap&#x131;s&#x131;</figcaption>
 </figure>
 <p>Bu noktaya kadar her şey çok güzel gelmişti ancak bir sorun vardı, bundle size.</p>
-<hr>
 <h3 id="büyük-bağımlılıkların-bundle-içerisinden-çıkarılması"><a href="#b%C3%BCy%C3%BCk-ba%C4%9F%C4%B1ml%C4%B1l%C4%B1klar%C4%B1n-bundle-i%C3%A7erisinden-%C3%A7%C4%B1kar%C4%B1lmas%C4%B1" aria-label="büyük bağımlılıkların bundle içerisinden çıkarılması permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Büyük Bağımlılıkların Bundle içerisinden Çıkarılması</h3>
 <p>UI kütüphanesi içerisinde rich text editor, drag and drop, date picker ve input mask gibi büyük paketler içeriyordu. Bu paketler hiç kullanılmayacak bile olsa bundle içerisinde geliyordu. Optimizasyon işine buradan basladık. Paketleri bundle anında ana bundle’dan çıkararak kullanılacağı app içerisinde yüklenmesine karar verdik. Bu optimizasyon sayesinde bundle size’ımız yaklaşık 405kb kadar küçüldü. Tekil bakıldığında boyutu makul gözüken paketler bir araya geldiğinde ciddi yük bindirebiliyor.</p>
-<hr>
 <h3 id="momentjs-yerine-dayjs-kullanılması"><a href="#momentjs-yerine-dayjs-kullan%C4%B1lmas%C4%B1" aria-label="momentjs yerine dayjs kullanılması permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Moment.js Yerine Day.js Kullanılması</h3>
 <p>Tarih/saat dönüşümleri her uygulamada yapılan bir işlem. Micro frontend öncesinde biz de bu dönüşümler için moment.js kullanıyorduk. Moment.js çok başarılı olmasına rağmen boyut anlamında bir o kadar başı dertte olan bir kütüphane. UI kütüphanesi oluşturmaya başladığımızda burada da bir optimizasyon yapmak istedik. Moment.js kullandığımız yerleri neredeyse aynı api’a sahip ama çok daha makul boyutlarda olan day.js ile değiştirmeye başladık. Bu geçiş sonrasında bundle size’ımda yaklaşık 270kb’lık bir küçülme yaşandı.</p>
-<hr>
 <p>Bu noktada %50 oranında iyileştirme sağladık ancak yine de 650kb civarında bir paket yükletmemiz gerekiyordu. Micro frontend altınaki bazı uygulamalar sadece birkaç komponente ihtiyaç duyuyordu. Biz ise 30’un üzerinde komponenti import etmesini istiyorduk.</p>
-<hr>
 <h3 id="komponentlerin-bağımsız-paketlenmesi"><a href="#komponentlerin-ba%C4%9F%C4%B1ms%C4%B1z-paketlenmesi" aria-label="komponentlerin bağımsız paketlenmesi permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Komponentlerin Bağımsız Paketlenmesi</h3>
 <p>Nasıl daha iyi yapabiliriz diye düşündük ve bundle anında her komponentin bağımsız olarak paketlenmesinin güzel bir optimizasyon olabileceğine karar verdik. Komponentleri stillendirirken scoped css tercih ettik. Bunun avantajını bundle anında da kullanarak css’leri ayrı dosyalarda tutmayıp komponentlerin içerisinde bıraktık. Böylece örneğin ScButton.js dosyası tek başına çalışabilir hale geldi. Her komponentin ayrı dosyada paketlenmiş olması bu komponentleri çağırırken ufak bir değişiklik yapmamızı gerektirdi. Artık herhangi bir komponenti import etmek istediğimizde tüm bundle içerisinden değil de komponentin bundle’ını import etmemiz gerekti.</p>
 <figure>
@@ -116,7 +111,6 @@
     
   <figcaption>import</figcaption>
 </figure>
-<hr>
 <h3 id="örnek-uygulama"><a href="#%C3%B6rnek-uygulama" aria-label="örnek uygulama permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Örnek Uygulama</h3>
 <p>Micro frontend mimarisini üzerinde çalışan 15’in üzerinde micro-app’imiz var. Bunlardan account-app’i inceleyecek olursak; giriş, kayıt ol ve parola değiştirme ekranları olan ufak bir micro-app. Bu uygulama UI kütüphanemizden sadece button ve input komponentlerini kullanıyor. Aşağıdaki grafikte yapılan iyileştirmeler sonucunca bu iki komponentin account-app’ine olan maliyetini görebilirsiniz.</p>
 <figure>
@@ -135,13 +129,11 @@
   
   </a>
     
-  <figcaption>import</figcaption>
+  <figcaption>bundle size</figcaption>
 </figure>
-<hr>
 <h3 id="sonuç"><a href="#sonu%C3%A7" aria-label="sonuç permalink" class="anchor"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Sonuç</h3>
 <p>Büyük paketlerin çıkarılması ve Day.js geçişi herkese önerebileceğim iyileştirmeler olacaktır. Komponentlerin bağımsız paketlenmesinde ise durum biraz farklı. Webpack, Rollup gibi modern bundler’lar benzer tree-shaking yani dead code elimination özelliklerine sahipler ve yeterli optimizasyonu sağlıyorlar. Bizim tercihimiz ise bu adımı micro-app’ler içerisinde değil de sorunun kaynağında çözmek oldu. Bu yöntem herkes için doğru olmayabilir. Ama böyle de bir çözüm olduğundan bahsetmek istedim.</p>
 <p>Umarım okurken keyif almışsınızdır. Görüşmek üzere :)</p>
-<hr>
 <figure>
   
   <a class="gatsby-resp-image-link" href="/static/5fcd857d21b25bd4b8f2ecd602cdac13/f0628/trendyol.png" style="display: block" target="_blank" rel="noopener">
