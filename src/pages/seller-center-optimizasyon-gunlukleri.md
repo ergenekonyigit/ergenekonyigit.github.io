@@ -9,8 +9,6 @@ Bu seride Trendyol Seller Center üzerinde yaptığımız çeşitli optimizasyon
 
 Seller Center, Trendyol içerisinde satış yapan işletmelerin ürünlerini yükleyip düzenleyebildiği, kampanyalar oluşturabildiği, sipariş süreçlerinin bulunduğu, finans metriklerinin takibini yapabildiği çok boyutlu bir platform.
 
----
-
 ### UI Kütüphanesi oluşturulması
 
 2020 başında frontend altyapımızı monolith’ten micro frontend’e taşıdık. Geçiş süreci ile ilgili yazıya aşağıdan ulaşabilirsiniz.
@@ -33,23 +31,16 @@ Trendyol’da testin önemi çok yüksek, biz de her komponentin unit ve snapsho
 
 Bu noktaya kadar her şey çok güzel gelmişti ancak bir sorun vardı, bundle size.
 
----
-
 ### Büyük Bağımlılıkların Bundle içerisinden Çıkarılması
 
 UI kütüphanesi içerisinde rich text editor, drag and drop, date picker ve input mask gibi büyük paketler içeriyordu. Bu paketler hiç kullanılmayacak bile olsa bundle içerisinde geliyordu. Optimizasyon işine buradan basladık. Paketleri bundle anında ana bundle’dan çıkararak kullanılacağı app içerisinde yüklenmesine karar verdik. Bu optimizasyon sayesinde bundle size’ımız yaklaşık 405kb kadar küçüldü. Tekil bakıldığında boyutu makul gözüken paketler bir araya geldiğinde ciddi yük bindirebiliyor.
-
----
 
 ### Moment.js Yerine Day.js Kullanılması
 
 Tarih/saat dönüşümleri her uygulamada yapılan bir işlem. Micro frontend öncesinde biz de bu dönüşümler için moment.js kullanıyorduk. Moment.js çok başarılı olmasına rağmen boyut anlamında bir o kadar başı dertte olan bir kütüphane. UI kütüphanesi oluşturmaya başladığımızda burada da bir optimizasyon yapmak istedik. Moment.js kullandığımız yerleri neredeyse aynı api’a sahip ama çok daha makul boyutlarda olan day.js ile değiştirmeye başladık. Bu geçiş sonrasında bundle size’ımda yaklaşık 270kb’lık bir küçülme yaşandı.
 
----
 
 Bu noktada %50 oranında iyileştirme sağladık ancak yine de 650kb civarında bir paket yükletmemiz gerekiyordu. Micro frontend altınaki bazı uygulamalar sadece birkaç komponente ihtiyaç duyuyordu. Biz ise 30'un üzerinde komponenti import etmesini istiyorduk.
-
----
 
 ### Komponentlerin Bağımsız Paketlenmesi
 
@@ -60,26 +51,20 @@ Nasıl daha iyi yapabiliriz diye düşündük ve bundle anında her komponentin 
   <figcaption>import</figcaption>
 </figure>
 
----
-
 ### Örnek Uygulama
 
 Micro frontend mimarisini üzerinde çalışan 15'in üzerinde micro-app’imiz var. Bunlardan account-app’i inceleyecek olursak; giriş, kayıt ol ve parola değiştirme ekranları olan ufak bir micro-app. Bu uygulama UI kütüphanemizden sadece button ve input komponentlerini kullanıyor. Aşağıdaki grafikte yapılan iyileştirmeler sonucunca bu iki komponentin account-app’ine olan maliyetini görebilirsiniz.
 
 <figure>
   <img loading="lazy" src="./img/seller-center-optimizasyon-gunlukleri/bundle-size.png" alt="">
-  <figcaption>import</figcaption>
+  <figcaption>bundle size</figcaption>
 </figure>
-
----
 
 ### Sonuç
 
 Büyük paketlerin çıkarılması ve Day.js geçişi herkese önerebileceğim iyileştirmeler olacaktır. Komponentlerin bağımsız paketlenmesinde ise durum biraz farklı. Webpack, Rollup gibi modern bundler’lar benzer tree-shaking yani dead code elimination özelliklerine sahipler ve yeterli optimizasyonu sağlıyorlar. Bizim tercihimiz ise bu adımı micro-app’ler içerisinde değil de sorunun kaynağında çözmek oldu. Bu yöntem herkes için doğru olmayabilir. Ama böyle de bir çözüm olduğundan bahsetmek istedim.
 
 Umarım okurken keyif almışsınızdır. Görüşmek üzere :)
-
----
 
 <figure>
   <img loading="lazy" src="./img/seller-center-optimizasyon-gunlukleri/trendyol.png" alt="">
