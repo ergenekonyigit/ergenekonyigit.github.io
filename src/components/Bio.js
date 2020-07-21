@@ -26,7 +26,7 @@ class Bio extends React.Component {
         <p
           style={{
             maxWidth: 330,
-            fontFamily: 'Inter',
+            fontFamily: 'sans-serif',
           }}
         >
           A <b>developer</b> currently living in Istanbul. Working at <b>Trendyol</b>.

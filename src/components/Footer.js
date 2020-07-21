@@ -7,7 +7,7 @@ class Footer extends React.Component {
     return (
       <footer
         style={{
-          fontFamily: 'Inter',
+          fontFamily: 'sans-serif',
           marginTop: rhythm(2.5),
           paddingTop: rhythm(1),
         }}

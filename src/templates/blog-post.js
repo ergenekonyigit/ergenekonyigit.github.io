@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: 'block',
-            fontFamily: 'Inter',
+            fontFamily: 'sans-serif',
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
           }}
@@ -51,7 +51,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <h3
           style={{
-            fontFamily: 'Inter',
+            fontFamily: 'sans-serif',
             marginTop: rhythm(0.25),
           }}
         >

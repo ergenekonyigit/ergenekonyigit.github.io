@@ -24,7 +24,7 @@ class BlogIndex extends React.Component {
             <div key={node.fields.slug}>
               <div
                 style={{
-                  fontFamily: 'Inter',
+                  fontFamily: 'sans-serif',
                   fontSize: 18,
                   color: 'rgba(255, 255, 255, 0.5)',
                   marginBottom: rhythm(1 / 4),
