@@ -31,7 +31,7 @@ class BlogPostTemplate extends React.Component {
           style={{
             ...scale(-1 / 5),
             display: 'block',
-            fontFamily: 'sans-serif',
+            fontFamily: 'Inter',
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
           }}
@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
           {` • ${formatReadingTime(post.timeToRead)}`}
         </p>
-        <div style={{ fontSize: 18, color: 'rgba(255, 255, 255, 0.8)' }} dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div style={{ fontSize: 18, color: '#e0e0e0' }} dangerouslySetInnerHTML={{ __html: post.html }} />
         <p>
           <a href={shareUrl} target="_blank" rel="noopener noreferrer">
             Share on Twitter
@@ -51,7 +51,7 @@ class BlogPostTemplate extends React.Component {
         </p>
         <h3
           style={{
-            fontFamily: 'sans-serif',
+            fontFamily: 'Inter',
             marginTop: rhythm(0.25),
           }}
         >

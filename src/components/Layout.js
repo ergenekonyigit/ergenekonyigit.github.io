@@ -14,7 +14,7 @@ class Layout extends React.Component {
         <h1
           style={{
             ...scale(1.0),
-            fontFamily: 'sans-serif',
+            fontFamily: 'Inter',
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -35,7 +35,7 @@ class Layout extends React.Component {
       header = (
         <h3
           style={{
-            fontFamily: 'sans-serif',
+            fontFamily: 'Inter',
             marginTop: 0,
             marginBottom: rhythm(-1),
           }}
@@ -56,13 +56,13 @@ class Layout extends React.Component {
     return (
       <div
         style={{
-          fontFamily: 'sans-serif',
-          backgroundColor: '#1c1e21',
+          fontFamily: 'Inter',
+          backgroundColor: '#111111',
           color: '#ffffff',
           marginLeft: 'auto',
           marginRight: 'auto',
           maxWidth: rhythm(30),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          padding: `${rhythm(1.5)} ${rhythm(3 / 7)}`,
         }}
       >
         {header}
