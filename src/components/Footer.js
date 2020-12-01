@@ -1,4 +1,5 @@
 import React from 'react'
+import { FeedbackFish } from '@feedback-fish/react'
 
 import { rhythm } from '../utils/typography'
 
@@ -13,6 +14,10 @@ class Footer extends React.Component {
         }}
       >
         <div style={{ float: 'right' }}>
+          <FeedbackFish projectId="e12f9ac7f0ce05">
+            <a>send feedback</a>
+          </FeedbackFish>{' '}
+          &bull;{' '}
           <a href="/rss.xml" target="_blank" rel="noopener noreferrer">
             rss
           </a>
