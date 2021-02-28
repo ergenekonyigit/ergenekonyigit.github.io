@@ -1,4 +1,223 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Personal blog by Ergenekon Yigit.]]></description><link>https://ergenekonyigit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Dec 2020 00:27:32 GMT</lastBuildDate><item><title><![CDATA[Seller Center Optimizasyon Günlükleri 1: UI Kütüphanesi]]></title><description><![CDATA[Yazının orijinaline buradan ulaşabilirsiniz. Bu seride Trendyol Seller Center üzerinde yaptığımız çeşitli optimizasyonları derleyeceğiz. İlk…]]></description><link>https://ergenekonyigit.github.io/seller-center-optimizasyon-gunlukleri/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/seller-center-optimizasyon-gunlukleri/</guid><pubDate>Fri, 03 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Personal blog by Ergenekon Yigit.]]></description><link>https://ergenekonyigit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Feb 2021 17:39:37 GMT</lastBuildDate><item><title><![CDATA[Planck Keyboard]]></title><description><![CDATA[Merhaba, bu yazıda yukarıdaki planck klavyenin yapım sürecinden bahsedeceğim. Baslangic Yıllardır mekanik klavyelere ilgili birisiyim…]]></description><link>https://ergenekonyigit.github.io/planck-keyboard/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/planck-keyboard/</guid><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cdb686d25faee242208f209824f5a90d/93d1b/planck-rev2.0-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFAf/EABUBAQEAAAAAAAAAAAAAAAAAAAID/9oADAMBAAIQAxAAAAFET2irk4S//8QAGhAAAgMBAQAAAAAAAAAAAAAAARIAAgMRIf/aAAgBAQABBQJcxGp1J3xzBnrYf//EABcRAAMBAAAAAAAAAAAAAAAAAAABEkH/2gAIAQMBAT8Bp4Wz/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAECEv/aAAgBAgEBPwFUbZ//xAAeEAABAgcBAAAAAAAAAAAAAAAAESEBAiIxM5Ghwf/aAAgBAQAGPwLJoZYlUvSwzC+n/8QAGxABAAIDAQEAAAAAAAAAAAAAAQARIWFxMUH/2gAIAQEAAT8h+sPFwxi20IYYb1IQDatyjwcEBC0j/9oADAMBAAIAAwAAABB7P//EABcRAQADAAAAAAAAAAAAAAAAAAEQETH/2gAIAQMBAT8QQL1D/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERYf/aAAgBAgEBPxBiVpkf/8QAGxABAQACAwEAAAAAAAAAAAAAAREAIUFxkdH/2gAIAQEAAT8QPBL4KHzknLi46KMPMuAJeBufMgSkRhZ27zVHILOvc//Z&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0&quot; title src=&quot;/static/cdb686d25faee242208f209824f5a90d/f67cc/planck-rev2.0-1.jpg&quot; srcset=&quot;/static/cdb686d25faee242208f209824f5a90d/9c38a/planck-rev2.0-1.jpg 200w,
+/static/cdb686d25faee242208f209824f5a90d/28275/planck-rev2.0-1.jpg 400w,
+/static/cdb686d25faee242208f209824f5a90d/f67cc/planck-rev2.0-1.jpg 800w,
+/static/cdb686d25faee242208f209824f5a90d/6e525/planck-rev2.0-1.jpg 1200w,
+/static/cdb686d25faee242208f209824f5a90d/e735c/planck-rev2.0-1.jpg 1600w,
+/static/cdb686d25faee242208f209824f5a90d/93d1b/planck-rev2.0-1.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Merhaba, bu yazıda yukarıdaki planck klavyenin yapım sürecinden bahsedeceğim.&lt;/p&gt;
+&lt;h2 id=&quot;baslangic&quot;&gt;&lt;a href=&quot;#baslangic&quot; aria-label=&quot;baslangic permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Baslangic&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Yıllardır mekanik klavyelere ilgili birisiyim. Mekanik klavye kullanmaya 2016’da %75 layouta sahip bir model ile başladım, 2018’de %100luk full-size bir mekanik klavyeye geçtim. O dönemde redditteki &lt;a href=&quot;https://www.reddit.com/r/MechanicalKeyboards/&quot;&gt;r/Mechanical Keyboards&lt;/a&gt; ve &lt;a href=&quot;https://www.reddit.com/r/olkb/&quot;&gt;r/olkb&lt;/a&gt; subredditlerini yoğun şekilde takip ediyordum. Bir süre sonra ben de yapmaya karar verdim.&lt;/p&gt;
+&lt;h2 id=&quot;rev-10-2019&quot;&gt;&lt;a href=&quot;#rev-10-2019&quot; aria-label=&quot;rev 10 2019 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Rev 1.0 (2019)&lt;/strong&gt;&lt;/h2&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/b067a344e7e162c77e1340cafff35ab2/93d1b/planck-rev1.0-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAABAACBf/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAHlvBsURaK//8QAGRAAAwEBAQAAAAAAAAAAAAAAAQIRAAMS/9oACAEBAAEFAveXtFMBuVobv//EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAEDAQE/Aar/xAAWEQEBAQAAAAAAAAAAAAAAAAAAARH/2gAIAQIBAT8BsY//xAAcEAABAwUAAAAAAAAAAAAAAAAAAREhEBIxQXH/2gAIAQEABj8CiC02vRlwPT//xAAcEAEAAgIDAQAAAAAAAAAAAAABABExQSFRYdH/2gAIAQEAAT8hHoeowZDnuWRfJtAhXenZOEGMfYpZ/9oADAMBAAIAAwAAABCz7//EABYRAQEBAAAAAAAAAAAAAAAAAAEAEf/aAAgBAwEBPxATYv/EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EAI//8QAHhABAQACAgIDAAAAAAAAAAAAAREAIVFhMUGBocH/2gAIAQEAAT8QpnM+T95AEiK7X3TZ8ZrcCiq5Ak1UaXp/HC0yIXbeXeOmuf/Z&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev1.0&quot; title src=&quot;/static/b067a344e7e162c77e1340cafff35ab2/f67cc/planck-rev1.0-1.jpg&quot; srcset=&quot;/static/b067a344e7e162c77e1340cafff35ab2/9c38a/planck-rev1.0-1.jpg 200w,
+/static/b067a344e7e162c77e1340cafff35ab2/28275/planck-rev1.0-1.jpg 400w,
+/static/b067a344e7e162c77e1340cafff35ab2/f67cc/planck-rev1.0-1.jpg 800w,
+/static/b067a344e7e162c77e1340cafff35ab2/6e525/planck-rev1.0-1.jpg 1200w,
+/static/b067a344e7e162c77e1340cafff35ab2/e735c/planck-rev1.0-1.jpg 1600w,
+/static/b067a344e7e162c77e1340cafff35ab2/93d1b/planck-rev1.0-1.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;%100 layout, boyut ve ağırlık(1.3kg) anlamında dezavantaj yaratmaya başladığında küçük ve taşınabilir bir klavyeye geçme düşüncem şekillenmeye başlamıştı. Planck klavyeyi gözume kestirdim, nasıl yapıldığını araştırıp klavye için gerekli ekipmanları temin ettim. Kasa için 2mm plexiglass kullandım, switch ve keycap’leri halihazırda kullandığım mekanik klavyeden aldık.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/8d227183df6d89309975a69a75c2c61d/e735c/planck-rev1.0-build-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAgADBP/EABUBAQEAAAAAAAAAAAAAAAAAAAEA/9oADAMBAAIQAxAAAAHjaAKwm//EABgQAQEBAQEAAAAAAAAAAAAAAAIBAxAS/9oACAEBAAEFAg/ErrI3uZKyk0QvP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABURAQEAAAAAAAAAAAAAAAAAABAh/9oACAECAQE/AYf/xAAaEAACAwEBAAAAAAAAAAAAAAAAARESIRBx/9oACAEBAAY/AqwhqEViTVvgqZz/xAAaEAACAwEBAAAAAAAAAAAAAAAAAREhMUFh/9oACAEBAAE/IdEx1igezU0QQi7LF1TdMUb6o0//2gAMAwEAAgADAAAAEEzv/8QAFhEAAwAAAAAAAAAAAAAAAAAAABEh/9oACAEDAQE/EKoM/8QAFhEBAQEAAAAAAAAAAAAAAAAAABEh/9oACAECAQE/EIY//8QAHBABAQACAwEBAAAAAAAAAAAAAREAITFBUYGh/9oACAEBAAE/ECMNTabfmE9WbB7X8w0OKKHODbIPQ94pw11i+YEVLn//2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev1.0-build&quot; title src=&quot;/static/8d227183df6d89309975a69a75c2c61d/f67cc/planck-rev1.0-build-1.jpg&quot; srcset=&quot;/static/8d227183df6d89309975a69a75c2c61d/9c38a/planck-rev1.0-build-1.jpg 200w,
+/static/8d227183df6d89309975a69a75c2c61d/28275/planck-rev1.0-build-1.jpg 400w,
+/static/8d227183df6d89309975a69a75c2c61d/f67cc/planck-rev1.0-build-1.jpg 800w,
+/static/8d227183df6d89309975a69a75c2c61d/6e525/planck-rev1.0-build-1.jpg 1200w,
+/static/8d227183df6d89309975a69a75c2c61d/e735c/planck-rev1.0-build-1.jpg 1600w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;O dönemde elektronik ile ilgi ve alakam sıfır olduğu için elektronik konusunda bilgili arkadaşım &lt;a href=&quot;https://twitter.com/burkay_durdu&quot;&gt;Burkay&lt;/a&gt;‘dan yardım istedim. Beraber ilk custom build’ımızı tamamladık. Space tuşundan anlaşılacağı üzere Planck MIT layout tercih ederek 2u büyüklüğünde space kullandık.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/d1e9bd45d0cd385b24a0e46e926fb818/93d1b/planck-rev1.0-2.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQBAv/EABUBAQEAAAAAAAAAAAAAAAAAAAEC/9oADAMBAAIQAxAAAAGPOg0K0V//xAAaEAADAAMBAAAAAAAAAAAAAAAAAQIDERIh/9oACAEBAAEFAtODqicHSfokRep//8QAFREBAQAAAAAAAAAAAAAAAAAAECH/2gAIAQMBAT8Bp//EABYRAAMAAAAAAAAAAAAAAAAAAAEQEf/aAAgBAgEBPwExf//EABoQAAICAwAAAAAAAAAAAAAAAAARAQIQEjL/2gAIAQEABj8CW8wd2G8o/8QAHRABAAEEAwEAAAAAAAAAAAAAAQARIUGRMVFhcf/aAAgBAQABPyEAUrolzF9ly1LmLzqCuNQSBxP/2gAMAwEAAgADAAAAECMv/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAEh/9oACAEDAQE/EJDX/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAEhUf/aAAgBAgEBPxCWFP/EABoQAQEBAAMBAAAAAAAAAAAAAAERACExUUH/2gAIAQEAAT8QKBBRGGSlb1Wc382u3Mq/E9bnGych0hv/2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev1.0&quot; title src=&quot;/static/d1e9bd45d0cd385b24a0e46e926fb818/f67cc/planck-rev1.0-2.jpg&quot; srcset=&quot;/static/d1e9bd45d0cd385b24a0e46e926fb818/9c38a/planck-rev1.0-2.jpg 200w,
+/static/d1e9bd45d0cd385b24a0e46e926fb818/28275/planck-rev1.0-2.jpg 400w,
+/static/d1e9bd45d0cd385b24a0e46e926fb818/f67cc/planck-rev1.0-2.jpg 800w,
+/static/d1e9bd45d0cd385b24a0e46e926fb818/6e525/planck-rev1.0-2.jpg 1200w,
+/static/d1e9bd45d0cd385b24a0e46e926fb818/e735c/planck-rev1.0-2.jpg 1600w,
+/static/d1e9bd45d0cd385b24a0e46e926fb818/93d1b/planck-rev1.0-2.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Klavyeyi kullanmaya başladım, hatta çantamda taşıyabilmek için bir taşıma kesesi diktim. Kısa bir süre sonra bazı tuşlarda temassızlık ve kasanın plate kısmında çatlamalar oldu.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/addf0c21361fcc8b334786ab5f5e669b/93d1b/planck-rev1.0-3.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFgEBAQEAAAAAAAAAAAAAAAAAAQID/9oADAMBAAIQAxAAAAG6b/OzqTUT/8QAHBAAAwABBQAAAAAAAAAAAAAAAAIDEwEREiEi/9oACAEBAAEFAsE5GtNn7LelVeBjP//EABcRAQEBAQAAAAAAAAAAAAAAAAEAEiL/2gAIAQMBAT8B0Bd3/8QAFxEBAQEBAAAAAAAAAAAAAAAAAQARIf/aAAgBAgEBPwFO2l//xAAcEAACAQUBAAAAAAAAAAAAAAAAASEQERIxYZH/2gAIAQEABj8C1d9ISZD8MU5O0//EABsQAQADAQADAAAAAAAAAAAAAAEAESExQXHh/9oACAEBAAE/Iej2ovxFxJRW0L4uS+bDt+Sa7+YKtan/2gAMAwEAAgADAAAAEFzP/8QAGREBAAIDAAAAAAAAAAAAAAAAAQAxcaHw/9oACAEDAQE/EBFexBVG5//EABYRAQEBAAAAAAAAAAAAAAAAAAABYf/aAAgBAgEBPxCho//EABwQAQACAgMBAAAAAAAAAAAAAAEAESExQVFhcf/aAAgBAQABPxAMvP1YPhF0iI4eIBbMSoeIErMGLwYTprD8mIpfb189e44It4q5/9k=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev1.0&quot; title src=&quot;/static/addf0c21361fcc8b334786ab5f5e669b/f67cc/planck-rev1.0-3.jpg&quot; srcset=&quot;/static/addf0c21361fcc8b334786ab5f5e669b/9c38a/planck-rev1.0-3.jpg 200w,
+/static/addf0c21361fcc8b334786ab5f5e669b/28275/planck-rev1.0-3.jpg 400w,
+/static/addf0c21361fcc8b334786ab5f5e669b/f67cc/planck-rev1.0-3.jpg 800w,
+/static/addf0c21361fcc8b334786ab5f5e669b/6e525/planck-rev1.0-3.jpg 1200w,
+/static/addf0c21361fcc8b334786ab5f5e669b/e735c/planck-rev1.0-3.jpg 1600w,
+/static/addf0c21361fcc8b334786ab5f5e669b/93d1b/planck-rev1.0-3.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Ve ben klavyeyi rafa kaldırdım.&lt;/p&gt;
+&lt;h2 id=&quot;2020&quot;&gt;&lt;a href=&quot;#2020&quot; aria-label=&quot;2020 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;(2020)&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;2020 içerisinde klavyeyi düzeltmeyi ve tekrar kullanmaya başlamayı çok istesem de pandemi nedeniyle o motivasyonu yakalayamadım.&lt;/p&gt;
+&lt;h2 id=&quot;rev-20-2021&quot;&gt;&lt;a href=&quot;#rev-20-2021&quot; aria-label=&quot;rev 20 2021 permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Rev 2.0 (2021)&lt;/strong&gt;&lt;/h2&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/8ed704a6c566cbf7d1cd677034057835/93d1b/planck-rev2.0-2.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 56.225198412698404%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAQCA//EABYBAQEBAAAAAAAAAAAAAAAAAAQBA//aAAwDAQACEAMQAAABh4sKyoSIj//EABYQAQEBAAAAAAAAAAAAAAAAABARE//aAAgBAQABBQLFr//EABgRAAMBAQAAAAAAAAAAAAAAAAABAhMx/9oACAEDAQE/AYql00Z//8QAGBEAAgMAAAAAAAAAAAAAAAAAABEBEzH/2gAIAQIBAT8Bawsk/8QAGBAAAgMAAAAAAAAAAAAAAAAAARAgMTL/2gAIAQEABj8C0rEP/8QAGhABAAMAAwAAAAAAAAAAAAAAAQARIRAx4f/aAAgBAQABPyEprBjTkz0lq7ivH//aAAwDAQACAAMAAAAQhO//xAAWEQEBAQAAAAAAAAAAAAAAAAABEQD/2gAIAQMBAT8QaauIb//EABURAQEAAAAAAAAAAAAAAAAAAAEQ/9oACAECAQE/EGT/AP/EABoQAQACAwEAAAAAAAAAAAAAAAEAESFRYTH/2gAIAQEAAT8QqKKDkVVq6OJQwybSbjH2f//Z&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0&quot; title src=&quot;/static/8ed704a6c566cbf7d1cd677034057835/f67cc/planck-rev2.0-2.jpg&quot; srcset=&quot;/static/8ed704a6c566cbf7d1cd677034057835/9c38a/planck-rev2.0-2.jpg 200w,
+/static/8ed704a6c566cbf7d1cd677034057835/28275/planck-rev2.0-2.jpg 400w,
+/static/8ed704a6c566cbf7d1cd677034057835/f67cc/planck-rev2.0-2.jpg 800w,
+/static/8ed704a6c566cbf7d1cd677034057835/6e525/planck-rev2.0-2.jpg 1200w,
+/static/8ed704a6c566cbf7d1cd677034057835/e735c/planck-rev2.0-2.jpg 1600w,
+/static/8ed704a6c566cbf7d1cd677034057835/93d1b/planck-rev2.0-2.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Aslında 2021 de 2020’den çok farklı ilerlemiyordu ancak &lt;a href=&quot;https://twitter.com/seyfoyun/status/1360541734351089665?s=20&quot;&gt;Seyfeddin Bassarac&lt;/a&gt;‘ın twitch’teki mekanik klavye yayını ve &lt;a href=&quot;https://twitter.com/fatih/status/1359053871889457154?s=20&quot;&gt;Fatih Arslan&lt;/a&gt;‘ın mekanik klavyeye geçisi motivasyonumu yükseltti.&lt;/p&gt;
+&lt;p&gt;2019 sonunda figma üzerinde yeni bir kasa çizip bunu 3mm’lik plexiglass ile kestirmiştim.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7ebb9cb72c93dfb848541fb9ba91892b/6c504/planck-rev2.0-build-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 57.52952755905512%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAMABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAQAF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB2ZBmP//EABkQAQADAQEAAAAAAAAAAAAAAAACERMBEv/aAAgBAQABBQLKDKDxHi1rf//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABcQAAMBAAAAAAAAAAAAAAAAAAAgMjH/2gAIAQEABj8CkkxP/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERUWH/2gAIAQEAAT8h5jmEhEqG2laUf//aAAwDAQACAAMAAAAQMA//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAEFAAAAAAAAAAAAAAAAAREhMWFxofH/2gAIAQEAAT8Qrl957zI5GsRThlwbopD/2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0-build&quot; title src=&quot;/static/7ebb9cb72c93dfb848541fb9ba91892b/f67cc/planck-rev2.0-build-1.jpg&quot; srcset=&quot;/static/7ebb9cb72c93dfb848541fb9ba91892b/9c38a/planck-rev2.0-build-1.jpg 200w,
+/static/7ebb9cb72c93dfb848541fb9ba91892b/28275/planck-rev2.0-build-1.jpg 400w,
+/static/7ebb9cb72c93dfb848541fb9ba91892b/f67cc/planck-rev2.0-build-1.jpg 800w,
+/static/7ebb9cb72c93dfb848541fb9ba91892b/6e525/planck-rev2.0-build-1.jpg 1200w,
+/static/7ebb9cb72c93dfb848541fb9ba91892b/e735c/planck-rev2.0-build-1.jpg 1600w,
+/static/7ebb9cb72c93dfb848541fb9ba91892b/6c504/planck-rev2.0-build-1.jpg 2032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Kesimden sonra fark ettim ki kayma olmuş, figma bu iş için doğru araç olmayabilir. &lt;a href=&quot;https://twitter.com/ergenekonyigit/status/1204873954357366784?s=20&quot;&gt;Detay&lt;/a&gt;&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7a818b631a614b5e019d098c61604f73/e7068/planck-rev2.0-build-2.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAIDAQT/xAAWAQEBAQAAAAAAAAAAAAAAAAABAAL/2gAMAwEAAhADEAAAAdpDmzKKD//EABoQAQADAAMAAAAAAAAAAAAAAAIAAxEBEhP/2gAIAQEAAQUCI7R5WPRRJ182WJnJ/8QAFxEBAAMAAAAAAAAAAAAAAAAAAAIREv/aAAgBAwEBPwG2ZP/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAgEBPwFsf//EABgQAAMBAQAAAAAAAAAAAAAAAAABETEQ/9oACAEBAAY/AsiG0jSUj5//xAAbEAEAAgIDAAAAAAAAAAAAAAABABEhMRBBUf/aAAgBAQABPyGpge4bgLhRwnI06hiihtqGOWf/2gAMAwEAAgADAAAAEJvv/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAExEf/aAAgBAwEBPxDCtEH/xAAVEQEBAAAAAAAAAAAAAAAAAAAQEf/aAAgBAgEBPxCF/8QAGxABAAMAAwEAAAAAAAAAAAAAAQARQSExcVH/2gAIAQEAAT8QezTAHxOlA31c53mBANvQjVwVWBCVIQUEuK2QXDJ//9k=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0-build&quot; title src=&quot;/static/7a818b631a614b5e019d098c61604f73/f67cc/planck-rev2.0-build-2.jpg&quot; srcset=&quot;/static/7a818b631a614b5e019d098c61604f73/9c38a/planck-rev2.0-build-2.jpg 200w,
+/static/7a818b631a614b5e019d098c61604f73/28275/planck-rev2.0-build-2.jpg 400w,
+/static/7a818b631a614b5e019d098c61604f73/f67cc/planck-rev2.0-build-2.jpg 800w,
+/static/7a818b631a614b5e019d098c61604f73/6e525/planck-rev2.0-build-2.jpg 1200w,
+/static/7a818b631a614b5e019d098c61604f73/e7068/planck-rev2.0-build-2.jpg 1280w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Yeni plate 3mm kalınlığında olduğundan switchleri sabit tutabilmek için sıcak silikon ile yapıştırdım, diyotları ve sütunları lehimledim. Bu sefer önceki buildden farklı olarak Planck Grid layout tercih ettim. 1 tane 2u space yerinde 2 tane 1u space tuşu koydum.&lt;/p&gt;
+&lt;p&gt;Switch olarak eski buildi parçalayıp çoğunlukla aynı switchlerden devam ettim. 43 adet SteelSeries QX1 Linear, &lt;a href=&quot;https://twitter.com/ardadev&quot;&gt;Arda Kılıçdağı&lt;/a&gt; 2019’da test için yolladığı 4 adet Gateron Brown (space ve layer tuşları) ve 1 adet Zealios V2 (backspace tuşu).&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/7ce741833e790bd2ade881971551c32c/93d1b/planck-rev2.0-build-3.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAECA//EABUBAQEAAAAAAAAAAAAAAAAAAAED/9oADAMBAAIQAxAAAAGJln0UV//EABoQAAMAAwEAAAAAAAAAAAAAAAABAhESEzL/2gAIAQEAAQUCSSN1FezjZwvMxqf/xAAXEQADAQAAAAAAAAAAAAAAAAABAhAR/9oACAEDAQE/AQmT/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPwE//8QAGxAAAgIDAQAAAAAAAAAAAAAAABEBAiFBkWH/2gAIAQEABj8CTMWlbHWyj010zEdEf//EABwQAAMAAgMBAAAAAAAAAAAAAAABETFBIVGBkf/aAAgBAQABPyFlV+CzQaLJM/0JRvdgNicDcEcX6f/aAAwDAQACAAMAAAAQQA//xAAXEQEBAQEAAAAAAAAAAAAAAAABABFR/9oACAEDAQE/EAWkL2//xAAWEQEBAQAAAAAAAAAAAAAAAAARAAH/2gAIAQIBAT8QcIy//8QAHBABAQACAgMAAAAAAAAAAAAAAREAITFRcZHR/9oACAEBAAE/EEQ0aZwesry8QhGCa4M2g+bjELVXb5kAt7LZ6yioFuP/2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0-build&quot; title src=&quot;/static/7ce741833e790bd2ade881971551c32c/f67cc/planck-rev2.0-build-3.jpg&quot; srcset=&quot;/static/7ce741833e790bd2ade881971551c32c/9c38a/planck-rev2.0-build-3.jpg 200w,
+/static/7ce741833e790bd2ade881971551c32c/28275/planck-rev2.0-build-3.jpg 400w,
+/static/7ce741833e790bd2ade881971551c32c/f67cc/planck-rev2.0-build-3.jpg 800w,
+/static/7ce741833e790bd2ade881971551c32c/6e525/planck-rev2.0-build-3.jpg 1200w,
+/static/7ce741833e790bd2ade881971551c32c/e735c/planck-rev2.0-build-3.jpg 1600w,
+/static/7ce741833e790bd2ade881971551c32c/93d1b/planck-rev2.0-build-3.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Daha sonra satırları ve sütunları Pro Micro’ya bağlayıp tüm tuşların çalışıp çalışmadığını kontol ettim. Her tuşun çalıştığından emin olduktan sonra 6li led şeriti bağlayıp kasayı kapattım.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/a269b7875ff9590fc6eca3b43c8058fb/a85c5/planck-rev2.0-build-4.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 56.22076707202993%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFBP/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAABm7J9ByePGf/EABsQAAMAAgMAAAAAAAAAAAAAAAABAgMREyIy/9oACAEBAAEFAptk9jkQ/eAWKNf/xAAWEQEBAQAAAAAAAAAAAAAAAAAAAiH/2gAIAQMBAT8Bpr//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPwEn/8QAHBAAAgEFAQAAAAAAAAAAAAAAAAERECEiMTJx/9oACAEBAAY/AumXlmSnwdNH/8QAGxAAAgIDAQAAAAAAAAAAAAAAAREAIUFRgaH/2gAIAQEAAT8hBJq3cIhbtE5OyUNIqKzQNZDhrH3P/9oADAMBAAIAAwAAABC03//EABcRAAMBAAAAAAAAAAAAAAAAAAABEXH/2gAIAQMBAT8Qhs2f/8QAFxEAAwEAAAAAAAAAAAAAAAAAAAERIf/aAAgBAgEBPxDSpD//xAAdEAEAAgICAwAAAAAAAAAAAAABESEAMUFhcZHR/9oACAEBAAE/EAqg8l5Wcjbp3eMAcyiBOyN4kxZuPOCWpVZQ96wQFW1l9z//2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.0-build&quot; title src=&quot;/static/a269b7875ff9590fc6eca3b43c8058fb/f67cc/planck-rev2.0-build-4.jpg&quot; srcset=&quot;/static/a269b7875ff9590fc6eca3b43c8058fb/9c38a/planck-rev2.0-build-4.jpg 200w,
+/static/a269b7875ff9590fc6eca3b43c8058fb/28275/planck-rev2.0-build-4.jpg 400w,
+/static/a269b7875ff9590fc6eca3b43c8058fb/f67cc/planck-rev2.0-build-4.jpg 800w,
+/static/a269b7875ff9590fc6eca3b43c8058fb/6e525/planck-rev2.0-build-4.jpg 1200w,
+/static/a269b7875ff9590fc6eca3b43c8058fb/e735c/planck-rev2.0-build-4.jpg 1600w,
+/static/a269b7875ff9590fc6eca3b43c8058fb/a85c5/planck-rev2.0-build-4.jpg 3207w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;h3 id=&quot;yazilim&quot;&gt;&lt;a href=&quot;#yazilim&quot; aria-label=&quot;yazilim permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Yazilim&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Yazılım olarak Qmk Firmware kullandım, açık kaynak olarak GitHub’ıma koydum. &lt;a href=&quot;https://github.com/ergenekonyigit/glosso&quot;&gt;Glosso&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Şu an kullandığım keymap’e &lt;a href=&quot;https://github.com/ergenekonyigit/glosso/tree/main/keymaps/default&quot;&gt;buradan&lt;/a&gt; ulaşabilirsiniz.&lt;/p&gt;
+&lt;p&gt;Yanlış hatırlamıyorsam Pro Micro’nun belleği 20 civarinda layer’a kadar yetiyor. Hangi tuşa başıldığında ne yapması gerektiğini kod üzerinden belirlediğiniz için yapılabileceklerin sınırı hayal gücünüz aslında. &lt;a href=&quot;https://twitter.com/neoberg/status/1157658827300528128?s=20&quot;&gt;Örnek&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;kapanis&quot;&gt;&lt;a href=&quot;#kapanis&quot; aria-label=&quot;kapanis permalink&quot; class=&quot;anchor&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;strong&gt;Kapanis&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;İlk görselle bu görsel arasında bazı tuslar farklı. Bunun nedeni tamamen ergonomik olarak bu düzenin daha rahat hissettirmesi.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/3185aca5cd6f9f2e690a35ff81994e22/93d1b/planck-rev2.1-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 56.225198412698404%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAALABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEBf/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/9oADAMBAAIQAxAAAAGFTZk1jIF//8QAGxABAQABBQAAAAAAAAAAAAAAAgMAAQQQEjH/2gAIAQEAAQUCo3nRZPczmG1ofeP/xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAdEAACAQQDAAAAAAAAAAAAAAABAgAQERIxIWFx/9oACAEBAAY/Ahk7G/O5q3sxZA3YEWxr/8QAGxAAAwEAAwEAAAAAAAAAAAAAAREhABBBUWH/2gAIAQEAAT8hjKWAQOXs4EJB0tByJgXGmSz94//aAAwDAQACAAMAAAAQzM//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAwEBPxAn/8QAFhEBAQEAAAAAAAAAAAAAAAAAARAh/9oACAECAQE/EHGf/8QAHhABAQABBAMBAAAAAAAAAAAAAREAITFBUWFxgaH/2gAIAQEAAT8QYO0RQI6SfHAkn5gfudeywfdCvnBLeoBFdLvziaLuVchn/9k=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-rev2.1&quot; title src=&quot;/static/3185aca5cd6f9f2e690a35ff81994e22/f67cc/planck-rev2.1-1.jpg&quot; srcset=&quot;/static/3185aca5cd6f9f2e690a35ff81994e22/9c38a/planck-rev2.1-1.jpg 200w,
+/static/3185aca5cd6f9f2e690a35ff81994e22/28275/planck-rev2.1-1.jpg 400w,
+/static/3185aca5cd6f9f2e690a35ff81994e22/f67cc/planck-rev2.1-1.jpg 800w,
+/static/3185aca5cd6f9f2e690a35ff81994e22/6e525/planck-rev2.1-1.jpg 1200w,
+/static/3185aca5cd6f9f2e690a35ff81994e22/e735c/planck-rev2.1-1.jpg 1600w,
+/static/3185aca5cd6f9f2e690a35ff81994e22/93d1b/planck-rev2.1-1.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Genel olarak planck kullanmaktan memnunum. İlk seferde olduğu gibi standart layout ve ortholinear layout arasında geçişte zorlanmadım. Rahatça bu klavye ve laptop klavyesi arasında geçiş yapabiliyorum. Şimdilik burada da qwerty layout kullanmaya devam ediyorum.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Seller Center Optimizasyon Günlükleri 1: UI Kütüphanesi]]></title><description><![CDATA[Yazının orijinaline buradan ulaşabilirsiniz. Bu seride Trendyol Seller Center üzerinde yaptığımız çeşitli optimizasyonları derleyeceğiz. İlk…]]></description><link>https://ergenekonyigit.github.io/seller-center-optimizasyon-gunlukleri/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/seller-center-optimizasyon-gunlukleri/</guid><pubDate>Fri, 03 Jul 2020 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&quot;https://medium.com/trendyol-tech/seller-center-optimizasyon-g%C3%BCnl%C3%BCkleri-1-ui-k%C3%BCt%C3%BCphanesi-8fc38fdc86c8&quot;&gt;Yazının orijinaline buradan ulaşabilirsiniz.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Bu seride Trendyol Seller Center üzerinde yaptığımız çeşitli optimizasyonları derleyeceğiz. İlk yazı konusu olarak geliştirdiğimiz UI kütüphanesinde yaptığımız iyileştirmelerden bahsettik. Keyifli okumalar.&lt;/p&gt;
