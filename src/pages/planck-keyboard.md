@@ -65,7 +65,7 @@ Kesimden sonra fark ettim ki kayma olmuş, figma bu iş için doğru araç olmay
 
 Yeni plate 3mm kalınlığında olduğundan switchleri sabit tutabilmek için sıcak silikon ile yapıştırdım, diyotları ve sütunları lehimledim. Bu sefer önceki buildden farklı olarak Planck Grid layout tercih ettim. 1 tane 2u space yerinde 2 tane 1u space tuşu koydum.
 
-Switch olarak eski buildi parçalayıp çoğunlukla aynı switchlerden devam ettim. 43 adet SteelSeries QX1 Linear, [Arda Kılıçdağı](https://twitter.com/ardadev) 2019'da test için yolladığı 4 adet Gateron Brown (space ve layer tuşları) ve 1 adet Zealios V2 (backspace tuşu).
+Switch olarak eski buildi parçalayıp çoğunlukla aynı switchlerden devam ettim. 43 adet SteelSeries QX1 Linear, [Arda Kılıçdağı](https://twitter.com/ardadev)'nın 2019'da test için yolladığı 4 adet Gateron Brown (space ve layer tuşları) ve 1 adet Zealios V2 (backspace tuşu).
 
 <figure>
   <img loading="lazy" src="./img/planck-keyboard/planck-rev2.0-build-3.jpg" alt="planck-rev2.0-build">
