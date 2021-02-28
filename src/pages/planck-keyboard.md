@@ -9,7 +9,7 @@ date: '2021-03-01'
 
 Merhaba, bu yazıda yukarıdaki planck klavyenin yapım sürecinden bahsedeceğim.
 
-## **Baslangic**
+## **Başlangıç**
 
 Yıllardır mekanik klavyelere ilgili birisiyim. Mekanik klavye kullanmaya 2016'da %75 layouta sahip bir model ile başladım, 2018'de %100luk full-size bir mekanik klavyeye geçtim. O dönemde redditteki [r/Mechanical Keyboards](https://www.reddit.com/r/MechanicalKeyboards/) ve [r/olkb](https://www.reddit.com/r/olkb/) subredditlerini yoğun şekilde takip ediyordum. Bir süre sonra ben de yapmaya karar verdim.
 
@@ -77,7 +77,7 @@ Daha sonra satırları ve sütunları Pro Micro'ya bağlayıp tüm tuşların ç
   <img loading="lazy" src="./img/planck-keyboard/planck-rev2.0-build-4.jpg" alt="planck-rev2.0-build">
 </figure>
 
-### **Yazilim**
+### **Yazılım**
 
 Yazılım olarak Qmk Firmware kullandım, açık kaynak olarak GitHub'ıma koydum. [Glosso](https://github.com/ergenekonyigit/glosso)
 
@@ -85,7 +85,7 @@ Yazılım olarak Qmk Firmware kullandım, açık kaynak olarak GitHub'ıma koydu
 
 Yanlış hatırlamıyorsam Pro Micro'nun belleği 20 civarinda layer'a kadar yetiyor. Hangi tuşa başıldığında ne yapması gerektiğini kod üzerinden belirlediğiniz için yapılabileceklerin sınırı hayal gücünüz aslında. [Örnek](https://twitter.com/neoberg/status/1157658827300528128?s=20)
 
-### **Kapanis**
+### **Kapanış**
 
 İlk görselle bu görsel arasında bazı tuslar farklı. Bunun nedeni tamamen ergonomik olarak bu düzenin daha rahat hissettirmesi.
 
