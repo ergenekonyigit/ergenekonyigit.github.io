@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Personal blog by Ergenekon Yigit.]]></description><link>https://ergenekonyigit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Feb 2021 17:58:31 GMT</lastBuildDate><item><title><![CDATA[Planck Keyboard]]></title><description><![CDATA[Merhaba, bu yazıda yukarıdaki planck klavyenin yapım sürecinden bahsedeceğim. Başlangıç Yıllardır mekanik klavyelere ilgili birisiyim…]]></description><link>https://ergenekonyigit.github.io/planck-keyboard/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/planck-keyboard/</guid><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;figure&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog]]></title><description><![CDATA[Personal blog by Ergenekon Yigit.]]></description><link>https://ergenekonyigit.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 13 Mar 2021 14:55:06 GMT</lastBuildDate><item><title><![CDATA[Planck Keyboard'a Emoji Layer Eklemek]]></title><description><![CDATA[Klavye yapım sürecini buradan okuyabilirsiniz. Merhaba, yakın zamanda klavyeme emojilerden oluşan bir layer ekledim, bu süreçte…]]></description><link>https://ergenekonyigit.github.io/planck-keyboarda-emoji-layer-eklemek/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/planck-keyboarda-emoji-layer-eklemek/</guid><pubDate>Sat, 13 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/164c3a579c2ec4d0b86821d06c104505/93d1b/planck-keyboard.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMFAf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAUpThUI4f//EABsQAAMAAgMAAAAAAAAAAAAAAAABAgMEERMU/9oACAEBAAEFAvSh7VExkuW4Ozgd23//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAWEQADAAAAAAAAAAAAAAAAAAABEBH/2gAIAQIBAT8BgX//xAAeEAACAQMFAAAAAAAAAAAAAAAAAQIREiETIjGRof/aAAgBAQAGPwLEDiKLtbqInl4NsIr0rcz/xAAcEAEAAwACAwAAAAAAAAAAAAABABEhQaFhcZH/2gAIAQEAAT8hRN321OL3YeA2GguoIZK/WOu4oVj5n//aAAwDAQACAAMAAAAQaA//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAwEBPxCq/8QAFhEBAQEAAAAAAAAAAAAAAAAAAAER/9oACAECAQE/EBkf/8QAHRAAAgICAwEAAAAAAAAAAAAAAREAQWGhITFR0f/aAAgBAQABPxAGL7yh9Z5GBGAFoCGIyrFWAIC7PyWBFezhqWoYkxU//9k=&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;planck-keyboard&quot; title src=&quot;/static/164c3a579c2ec4d0b86821d06c104505/f67cc/planck-keyboard.jpg&quot; srcset=&quot;/static/164c3a579c2ec4d0b86821d06c104505/9c38a/planck-keyboard.jpg 200w,
+/static/164c3a579c2ec4d0b86821d06c104505/28275/planck-keyboard.jpg 400w,
+/static/164c3a579c2ec4d0b86821d06c104505/f67cc/planck-keyboard.jpg 800w,
+/static/164c3a579c2ec4d0b86821d06c104505/6e525/planck-keyboard.jpg 1200w,
+/static/164c3a579c2ec4d0b86821d06c104505/e735c/planck-keyboard.jpg 1600w,
+/static/164c3a579c2ec4d0b86821d06c104505/93d1b/planck-keyboard.jpg 4032w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Klavye yapım sürecini &lt;a href=&quot;https://ergenekonyigit.github.io/planck-keyboard/&quot;&gt;buradan&lt;/a&gt; okuyabilirsiniz.&lt;/p&gt;
+&lt;p&gt;Merhaba, yakın zamanda klavyeme emojilerden oluşan bir layer ekledim, bu süreçte karşılaştığım sorunlardan ve uyguladığım çözümden bahsedeceğim.&lt;/p&gt;
+&lt;p&gt;Klavyede &lt;a href=&quot;https://beta.docs.qmk.fm&quot;&gt;qmk firmware&lt;/a&gt; kullandığımdan bir önceki yazıda bahsetmiştim. Qmk dokümanı altında &lt;a href=&quot;https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode&quot;&gt;unicode&lt;/a&gt; desteğini 3 faklı yöntemle nasıl uygulanacağı anlatılmış. Ben bunlardan &lt;a href=&quot;https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode#1-2-unicode-map-id-unicode-map&quot;&gt;Unicode Map&lt;/a&gt; yöntemini tercih ettim.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/ergenekonyigit/glosso/blob/main/rules.mk#L33&quot;&gt;rules.mk&lt;/a&gt; dosyasinda unicode map’i açtım. Kullanacağım emojileri &lt;a href=&quot;https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L75-L100&quot;&gt;unicode_names&lt;/a&gt; enum’ına çıkardım.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;enum&lt;/span&gt; &lt;span class=&quot;token class-name&quot;&gt;unicode_names&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token comment&quot;&gt;// Row 0&lt;/span&gt;
+    JOY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;token comment&quot;&gt;// 😂&lt;/span&gt;
+    SMIL2&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😅&lt;/span&gt;
+    SMILE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😁&lt;/span&gt;
+    GRIN&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 😊&lt;/span&gt;
+    KISS&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 😘&lt;/span&gt;
+    HALO&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 😇&lt;/span&gt;
+    PHEW&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 😌&lt;/span&gt;
+    CONFU&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😕&lt;/span&gt;
+    PENSV&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😔&lt;/span&gt;
+    UNAMU&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😒&lt;/span&gt;
+    DISAP&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 😞&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// Row 1&lt;/span&gt;
+    CELE&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 🙌&lt;/span&gt;
+    OK&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;    &lt;span class=&quot;token comment&quot;&gt;// 👌&lt;/span&gt;
+    PRAY&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 🙏&lt;/span&gt;
+    CLAP&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 👏&lt;/span&gt;
+    THMUP&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// 👍&lt;/span&gt;
+
+    &lt;span class=&quot;token comment&quot;&gt;// Row 2&lt;/span&gt;
+    EYES&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;  &lt;span class=&quot;token comment&quot;&gt;// 👀&lt;/span&gt;
+    HUNRD  &lt;span class=&quot;token comment&quot;&gt;// 💯&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt; Bu seçtiğim emojilerin unicode değerlerini &lt;a href=&quot;https://unicode-table.com/en/&quot;&gt;unicode-table&lt;/a&gt; üzerinden bulup &lt;a href=&quot;https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L102-L126&quot;&gt;unicode_map&lt;/a&gt; icerisinde eşleştirdim.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; uint32_t PROGMEM unicode_map&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+   &lt;span class=&quot;token comment&quot;&gt;// Row 0&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;JOY&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;   &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0X1F602&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;SMIL2&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F605&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;SMILE&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F601&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;GRIN&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F600&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;KISS&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F618&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;HALO&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F607&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PHEW&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F60C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;CONFU&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F615&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PENSV&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F614&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;UNAMU&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F612&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;DISAP&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F61E&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+   &lt;span class=&quot;token comment&quot;&gt;// Row 1&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;CELE&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F64C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;OK&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;    &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F44C&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;PRAY&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F64F&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;CLAP&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F44F&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;THMUP&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F44D&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+
+   &lt;span class=&quot;token comment&quot;&gt;// Row 2&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;EYES&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;  &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F440&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;HUNRD&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;0x1F4AF&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt; &lt;a href=&quot;https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L220-L236&quot;&gt;_EMOJI&lt;/a&gt; adında bir layer oluşturup emojileri bu layer’a ekledim. Layer’in son hali aşağıdaki gibi oldu.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/b460507aeda72867d38050ec4ac2be5e/7386e/emoji-layer.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 26.376440460947503%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAFABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcWlkB//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAEFAn//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAY/An//xAAUEAEAAAAAAAAAAAAAAAAAAAAQ/9oACAEBAAE/IX//2gAMAwEAAgADAAAAEIQf/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGBABAAMBAAAAAAAAAAAAAAAAAQARITH/2gAIAQEAAT8QvLIjZrFR6z//2Q==&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;emoji-layer&quot; title src=&quot;/static/b460507aeda72867d38050ec4ac2be5e/f67cc/emoji-layer.jpg&quot; srcset=&quot;/static/b460507aeda72867d38050ec4ac2be5e/9c38a/emoji-layer.jpg 200w,
+/static/b460507aeda72867d38050ec4ac2be5e/28275/emoji-layer.jpg 400w,
+/static/b460507aeda72867d38050ec4ac2be5e/f67cc/emoji-layer.jpg 800w,
+/static/b460507aeda72867d38050ec4ac2be5e/6e525/emoji-layer.jpg 1200w,
+/static/b460507aeda72867d38050ec4ac2be5e/7386e/emoji-layer.jpg 1562w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;İkinci aşamada belirtilen unicode hex input klavyesini ekledim.&lt;/p&gt;
+&lt;figure&gt;
+  
+  &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/99baaa649b491682e42a3cdbc4a96664/d335e/hex-input.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
+  
+  &lt;span class=&quot;gatsby-resp-image-wrapper&quot; style=&quot;position: relative; display: block;  max-width: 800px; margin-left: auto; margin-right: auto;&quot;&gt;
+    &lt;span class=&quot;gatsby-resp-image-background-image&quot; style=&quot;padding-bottom: 90.76923076923077%; position: relative; bottom: 0; left: 0; background-image: url(&amp;apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAASABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAIEBf/EABQBAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhADEAAAAeLUaDICQAf/xAAZEAACAwEAAAAAAAAAAAAAAAABMQACEBH/2gAIAQEAAQUCC4IWELVhe//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABgQAAIDAAAAAAAAAAAAAAAAAAAQIDLh/9oACAEBAAY/AjHWP//EABwQAAEDBQAAAAAAAAAAAAAAAAEAEBEgIWFxsf/aAAgBAQABPyEQbuLK6ocEd03/2gAMAwEAAgADAAAAECgAAP/EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8QH//EABURAQEAAAAAAAAAAAAAAAAAAAEg/9oACAECAQE/ECP/xAAcEAEAAgIDAQAAAAAAAAAAAAABABEQITFBcbH/2gAIAQEAAT8QONBPVx6gsVNAPCIBfyCKSFacznxeP//Z&amp;apos;); background-size: cover; display: block;&quot;&gt;
+      &lt;img class=&quot;gatsby-resp-image-image&quot; style=&quot;width: 100%; height: 100%; margin: 0; vertical-align: middle; position: absolute; top: 0; left: 0; box-shadow: inset 0px 0px 0px 400px white;&quot; alt=&quot;hex-input-source&quot; title src=&quot;/static/99baaa649b491682e42a3cdbc4a96664/f67cc/hex-input.jpg&quot; srcset=&quot;/static/99baaa649b491682e42a3cdbc4a96664/9c38a/hex-input.jpg 200w,
+/static/99baaa649b491682e42a3cdbc4a96664/28275/hex-input.jpg 400w,
+/static/99baaa649b491682e42a3cdbc4a96664/f67cc/hex-input.jpg 800w,
+/static/99baaa649b491682e42a3cdbc4a96664/6e525/hex-input.jpg 1200w,
+/static/99baaa649b491682e42a3cdbc4a96664/d335e/hex-input.jpg 1560w&quot; sizes=&quot;(max-width: 800px) 100vw, 800px&quot;&gt;
+    &lt;/span&gt;
+  &lt;/span&gt;
+  
+  &lt;/a&gt;
+    
+&lt;/figure&gt;
+&lt;p&gt;Burada karşılaştığım sorun emojileri düzgün ekrana basabilmek için hex inputuna anlık geçip daha sonra diğer input yöntemine dönmekti.&lt;/p&gt;
+&lt;p&gt;Bunun için yaptığım “hacky” çözüm EMOJI adında bir macro oluşturup bu EMOJI tuşuna basıldığı an, önce ctrl+alt+space ile hex iput switch’ine geçip daha sonra _EMOJI layer’ını aktif etmek, tuştan parmak kaldırıldığında da yeniden ctrl+alt+space ile bir sonraki input source’a geçmek oldu.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;c&quot;&gt;&lt;pre class=&quot;language-c&quot;&gt;&lt;code class=&quot;language-c&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; EMOJI&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;record&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt;event&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pressed&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LCTL&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LALT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_SPC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;layer_on&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_EMOJI&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LCTL&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LALT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_SPC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LCTL&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LALT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;register_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_SPC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;layer_off&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;_EMOJI&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LCTL&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_LALT&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;token function&quot;&gt;unregister_code&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;KC_SPC&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Böylece emoji layer’ını sorunsuz şekilde kullanmaya başladım. Yukarıda dediğim gibi bu benim “hacky” çözümüm, eğer daha verimli bir çözüm bulmuş ve kullanıyorsanız github’dan issue veya pr açabilirsiniz.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Planck Keyboard]]></title><description><![CDATA[Merhaba, bu yazıda yukarıdaki planck klavyenin yapım sürecinden bahsedeceğim. Başlangıç Yıllardır mekanik klavyelere ilgili birisiyim…]]></description><link>https://ergenekonyigit.github.io/planck-keyboard/</link><guid isPermaLink="false">https://ergenekonyigit.github.io/planck-keyboard/</guid><pubDate>Mon, 01 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;figure&gt;
   
   &lt;a class=&quot;gatsby-resp-image-link&quot; href=&quot;/static/cdb686d25faee242208f209824f5a90d/93d1b/planck-rev2.0-1.jpg&quot; style=&quot;display: block&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;
   
