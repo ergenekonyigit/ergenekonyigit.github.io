@@ -9,11 +9,11 @@ date: '2021-03-13'
 
 Klavye yapım sürecini [buradan](https://ergenekonyigit.github.io/planck-keyboard/) okuyabilirsiniz.
 
-Merhaba, yakın zamanda klavyeme emojilerden oluşan bir layer ekledim, bu süreçte karşılaştığım sorunlardan ve uyguladığım çözümden bahsedeceğim.
+Merhaba, yakın zamanda klavyeme emojilerden oluşan bir layer ekledim, bu süreçte karşılaştığım sorun ve uyguladığım çözümden bahsedeceğim.
 
-Klavyede [qmk firmware](https://beta.docs.qmk.fm) kullandığımdan bir önceki yazıda bahsetmiştim. Qmk dokümanı altında [unicode](https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode) desteğini 3 faklı yöntemle nasıl uygulanacağı anlatılmış. Ben bunlardan [Unicode Map](https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode#1-2-unicode-map-id-unicode-map) yöntemini tercih ettim.
+Klavyede [qmk firmware](https://beta.docs.qmk.fm) kullandığımdan bir önceki yazıda bahsetmiştim. Qmk dokümanı altında [unicode](https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode) desteğini 3 faklı yöntemle nasıl uygulanacağı anlatılıyor. Ben bunlardan [Unicode Map](https://beta.docs.qmk.fm/using-qmk/software-features/feature_unicode#1-2-unicode-map-id-unicode-map) yöntemini tercih ettim.
 
-[rules.mk](https://github.com/ergenekonyigit/glosso/blob/main/rules.mk#L33) dosyasinda unicode map'i açtım. Kullanacağım emojileri [unicode_names](https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L75-L100) enum'ına çıkardım.
+[rules.mk](https://github.com/ergenekonyigit/glosso/blob/main/rules.mk#L33) dosyasında unicode map'i açtım. Kullanacağım emojileri [unicode_names](https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L75-L100) enum'ına çıkardım.
 
 ```c
 enum unicode_names {
@@ -43,7 +43,7 @@ enum unicode_names {
 };
 ```
 
- Bu seçtiğim emojilerin unicode değerlerini [unicode-table](https://unicode-table.com/en/) üzerinden bulup [unicode_map](https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L102-L126) icerisinde eşleştirdim.
+ Bu seçtiğim emojilerin unicode değerlerini [unicode-table](https://unicode-table.com/en/) üzerinden bulup [unicode_map](https://github.com/ergenekonyigit/glosso/blob/main/keymaps/default/keymap.c#L102-L126) içerisinde eşleştirdim.
 
  ```c
 const uint32_t PROGMEM unicode_map[] = {
@@ -111,4 +111,4 @@ case EMOJI:
     break;
 ```
 
-Böylece emoji layer'ını sorunsuz şekilde kullanmaya başladım. Yukarıda dediğim gibi bu benim "hacky" çözümüm, eğer daha verimli bir çözüm bulmuş ve kullanıyorsanız github'dan issue veya pr açabilirsiniz.
+Böylece emoji layer'ını sorunsuz şekilde kullanmaya başladım. Yukarıda dediğim gibi bu benim "hacky" çözümüm, eğer daha verimli bir çözüm bulmuş ve kullanıyorsanız [github](https://github.com/ergenekonyigit/glosso)'dan issue veya pr açabilirsiniz.
