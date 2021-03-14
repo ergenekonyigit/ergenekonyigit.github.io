@@ -4,8 +4,8 @@ import { sample } from 'lodash'
 
 const WIDTH = 300
 const HEIGHT = 500
-const PARTICLE_BOUNCYNESS = 0.5
-const TOTAL_BALL_COUNT = 1000
+const PARTICLE_BOUNCYNESS = 0.6
+const TOTAL_BALL_COUNT = 1500
 const BALL_SIZE = 2
 const PEG_SIZE = 2
 const BACKGROUND_COLOR = '#000000'
@@ -136,7 +136,7 @@ const GaltonBoard = () => {
     // divider walls
     for (let x = 20; x <= 280; x += 10) {
       if (x !== 0) {
-        let divider = wall(x, 400, 2, 220)
+        let divider = wall(x, 404, 2, 220)
         World.add(engine.world, divider)
       }
     }
