@@ -99,20 +99,20 @@ const GaltonBoard = () => {
 
     // outer walls
     World.add(engine.world, [
-      wall(150, 0, 300, 20), // top
-      wall(150, 500, 300, 20), // bottom
-      wall(0, 500, 20, 1000), // left
-      wall(300, 500, 20, 1000), // right
+      wall(150, 0, WIDTH, 20), // top
+      wall(150, HEIGHT, WIDTH, 20), // bottom
+      wall(0, HEIGHT, 20, HEIGHT * 2), // left
+      wall(WIDTH, HEIGHT, 20, HEIGHT * 2), // right
     ])
 
     // inner walls
     World.add(engine.world, [
-      line(185, 63, 75, 2, Math.PI * -0.3), // right top
-      line(115, 63, 75, 2, Math.PI * 0.3), // left top
-      line(196, 110, 75, 2, Math.PI * 0.153), // right middle
-      line(104, 110, 75, 2, Math.PI * -0.153), // left middle
-      line(260, 190, 140, 2, Math.PI * 0.353), // right bottom
-      line(40, 190, 140, 2, Math.PI * -0.353), // left bottom
+      line(190, 45, 95, 2, Math.PI * -0.3), // right top
+      line(110, 45, 95, 2, Math.PI * 0.3), // left top
+      line(196, 100, 75, 2, Math.PI * 0.153), // right middle
+      line(104, 100, 75, 2, Math.PI * -0.153), // left middle
+      line(260, 180, 140, 2, Math.PI * 0.353), // right bottom
+      line(40, 180, 140, 2, Math.PI * -0.353), // left bottom
     ])
 
     // pegs
@@ -126,7 +126,7 @@ const GaltonBoard = () => {
           pegs.push(
             World.add(
               engine.world,
-              peg(150 + (j * spacingX - i * (spacingX / 2)), i * spacingY)
+              peg(150 + (j * spacingX - i * (spacingX / 2)), i * spacingY - 10)
             )
           )
         }
@@ -136,7 +136,7 @@ const GaltonBoard = () => {
     // divider walls
     for (let x = 20; x <= 280; x += 10) {
       if (x !== 0) {
-        let divider = wall(x, 404, 2, 220)
+        let divider = wall(x, 394, 2, 220)
         World.add(engine.world, divider)
       }
     }
