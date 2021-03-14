@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import Matter from 'matter-js'
+import { sample } from 'lodash'
 
 const WIDTH = 300
 const HEIGHT = 500
@@ -10,6 +11,19 @@ const PEG_SIZE = 2
 const BACKGROUND_COLOR = '#000000'
 const WALL_COLOR = '#222222'
 const PEG_COLOR = '#333333'
+
+const colors = [
+  '#ff2d55',
+  '#5856d6',
+  '#ff9500',
+  '#ffcc00',
+  '#ff3b30',
+  '#5ac8fa',
+  '#007aff',
+  '#4cd964',
+]
+
+const color = sample(colors)
 
 const GaltonBoard = () => {
   const boxRef = useRef(null)
@@ -54,8 +68,7 @@ const GaltonBoard = () => {
         frictionAir: 0.042,
         sleepThreshold: 25,
         render: {
-          fillStyle: 'yellow',
-          visible: true,
+          fillStyle: color,
         },
       })
 
