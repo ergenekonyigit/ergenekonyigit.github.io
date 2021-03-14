@@ -11,9 +11,45 @@ class Footer extends React.Component {
           fontFamily: 'sans-serif',
           marginTop: rhythm(2.5),
           paddingTop: rhythm(1),
+          display: 'flex',
+          justifyContent: 'space-between',
+          flexWrap: 'wrap'
         }}
       >
-        <div style={{ float: 'right' }}>
+        <div>
+          <a
+            href="https://twitter.com/ergenekonyigit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            twitter
+          </a>{' '}
+          &bull;{' '}
+          <a
+            href="https://github.com/ergenekonyigit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            github
+          </a>{' '}
+          &bull;{' '}
+          <a
+            href="https://www.linkedin.com/in/ergenekonyigit/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            linkedin
+          </a>{' '}
+          &bull;{' '}
+          <a
+            href="mailto:yigitergenekon@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            e-mail
+          </a>
+        </div>
+        <div>
           <FeedbackFish projectId="e12f9ac7f0ce05">
             <a>send feedback</a>
           </FeedbackFish>{' '}
@@ -22,37 +58,6 @@ class Footer extends React.Component {
             rss
           </a>
         </div>
-        <a
-          href="https://twitter.com/ergenekonyigit"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          twitter
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://github.com/ergenekonyigit"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          github
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="https://www.linkedin.com/in/ergenekonyigit/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          linkedin
-        </a>{' '}
-        &bull;{' '}
-        <a
-          href="mailto:yigitergenekon@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          e-mail
-        </a>
       </footer>
     )
   }

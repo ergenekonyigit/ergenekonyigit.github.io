@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Bio from '../components/Bio'
+import GaltonBoard from '../components/GaltonBoard'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'
@@ -17,7 +18,18 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO />
-        <Bio />
+        <div
+          style={{
+            display: 'flex',
+            flex: 1,
+            justifyContent: 'space-between',
+            flexWrap: 'wrap',
+            marginBottom: rhythm(2.5),
+          }}
+        >
+          <Bio />
+          <GaltonBoard />
+        </div>
         {posts.map(({ node }) => {
           const title = get(node, 'frontmatter.title') || node.fields.slug
           return (
