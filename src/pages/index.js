@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby'
 import get from 'lodash/get'
 
 import Bio from '../components/Bio'
-import GaltonBoard from '../components/GaltonBoard'
+import GaltonBoard from 'react-galton-board'
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import Footer from '../components/Footer'

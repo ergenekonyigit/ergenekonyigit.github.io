@@ -1,6 +1,5 @@
 import React from 'react'
 
-import { MatterStepOne } from './GaltonBoard'
 import profilePic from '../assets/profile-pic.jpg'
 import { rhythm } from '../utils/typography'
 
@@ -48,7 +47,6 @@ class Bio extends React.Component {
               <b>Trendyol</b>.
             </p>
           </div>
-          {/* <MatterStepOne /> */}
         </div>
       </div>
     )
