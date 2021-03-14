@@ -64,7 +64,6 @@ const GaltonBoard = () => {
       Bodies.circle(x, y, BALL_SIZE, {
         restitution: PARTICLE_BOUNCYNESS,
         friction: 0.00001,
-        density: 0.001,
         frictionAir: 0.042,
         sleepThreshold: 25,
         render: {
@@ -75,7 +74,7 @@ const GaltonBoard = () => {
     const peg = (x, y) =>
       Bodies.circle(x, y, PEG_SIZE, {
         isStatic: true,
-        restitution: 0.5,
+        restitution: PARTICLE_BOUNCYNESS,
         render: {
           fillStyle: PEG_COLOR,
         },
