@@ -43,7 +43,7 @@ class Bio extends React.Component {
                 fontFamily: 'sans-serif',
               }}
             >
-              A <b>developer</b> currently living in Istanbul. Working at{' '}
+              A <b>developer</b> currently living in Turkey. Working at{' '}
               <b>Trendyol</b>.
             </p>
           </div>
