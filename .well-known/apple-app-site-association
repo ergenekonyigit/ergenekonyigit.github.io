@@ -3,32 +3,16 @@
     "apps": [],
     "details": [
       {
-        "appID": "4V6MSLD979.com.trendyol.sellercenter.staging.enterprise",
-        "paths": [
-          "*",
-          "/"
-        ]
+        "appID": "4V6MSLD979.com.trendyol.sellercenter.staging.enterprise"
       },
       {
-        "appID": "3VN8SLU4GS.com.trendyol.sellercenter.staging",
-        "paths": [
-          "*",
-          "/"
-        ]
+        "appID": "3VN8SLU4GS.com.trendyol.sellercenter.staging"
       },
       {
-        "appID": "4V6MSLD979.com.trendyol.sellercenter.enterprise",
-        "paths": [
-          "*",
-          "/"
-        ]
+        "appID": "4V6MSLD979.com.trendyol.sellercenter.enterprise"
       },
       {
-        "appID": "3VN8SLU4GS.com.trendyol.sellercenter",
-        "paths": [
-          "*",
-          "/"
-        ]
+        "appID": "3VN8SLU4GS.com.trendyol.sellercenter"
       }
     ]
   },
