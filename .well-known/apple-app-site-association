@@ -1,0 +1,43 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "4V6MSLD979.com.trendyol.sellercenter.staging.enterprise",
+        "paths": [
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "3VN8SLU4GS.com.trendyol.sellercenter.staging",
+        "paths": [
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "4V6MSLD979.com.trendyol.sellercenter.enterprise",
+        "paths": [
+          "*",
+          "/"
+        ]
+      },
+      {
+        "appID": "3VN8SLU4GS.com.trendyol.sellercenter",
+        "paths": [
+          "*",
+          "/"
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": [
+      "4V6MSLD979.com.trendyol.sellercenter.staging.enterprise",
+      "3VN8SLU4GS.com.trendyol.sellercenter.staging",
+      "4V6MSLD979.com.trendyol.sellercenter.enterprise",
+      "3VN8SLU4GS.com.trendyol.sellercenter"
+    ]
+  }
+}
